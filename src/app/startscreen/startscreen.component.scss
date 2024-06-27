@@ -1,0 +1,42 @@
+body {
+    height: 100vh;
+    margin: 0; /* Sicherstellen, dass kein Standardabstand vorhanden ist */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  > h1 {
+    font-size: 8vw;
+    font-weight: 800;
+    font-family: "Syne";
+    text-align: center;
+  }
+  >div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    >.line{
+        height: 0.4vh;
+        width: 90%;
+        background-color: black;
+    }
+  }
+}
+
+
+h3 {
+  font-size: 5vw;
+  font-weight: 700;
+  font-family: "Syne";
+  color: #ff9900;
+}
