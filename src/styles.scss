@@ -1,3 +1,12 @@
+body{
+  margin: 0;
+  max-width: 1920px;
+  margin: auto;
+  background-color: #fffcf3 !important;
+  display: flex;
+  justify-content: center;
+}
+
 /* You can add global styles to this file, and also import other style files */
 .font-syne {
   font-family: "Syne", sans-serif !important;

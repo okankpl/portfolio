@@ -1,1 +1,12 @@
-<p>header works!</p>
+<header>
+  <div><img class="logo" src="./../../../assets/img/logo.png" alt="" /></div>
+
+  <div class="burger-menu" (click)="toggleMenu()">
+    <img [src]="getCurrentFrame()" alt="Burger Menu">
+  </div>
+  <nav [class.active]="menuActive">
+    <a routerLink="/about-me">About Me</a>
+    <a routerLink="/my-skills">My Skills</a>
+    <a routerLink="/projects">Projects</a>
+  </nav>
+</header>
