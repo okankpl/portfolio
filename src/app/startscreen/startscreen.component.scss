@@ -1,6 +1,7 @@
 body {
     height: 100vh;
     margin: 0; 
+    background-color: #fffcf3;
   }
 
 section {
@@ -39,4 +40,23 @@ h3 {
   color: #ff9900;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.under-section {
+    justify-content: space-between !important;
+    font-size: 1.5vw;
+    margin-top: 0;
+}
+
+.email{
+    transform: rotate(-90deg);
+}
+
+.scroll-down{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    >img {
+        height: 10vh;
+    }
 }
