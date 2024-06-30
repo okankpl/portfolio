@@ -28,7 +28,7 @@ export class StartscreenComponent {
     if (scrollImgElement) {
       this.animationTimeout = setTimeout(() => {
         scrollImgElement.src = './../../assets/img/scrolldown1.png';
-      }, 1000); 
+      }, 500); 
     }
   }
 }
