@@ -18,7 +18,7 @@ header {
   position: absolute;
   top: 80px;
   width: 90%;
-  height: 100%;
+  height: calc(100% - 80px);
   background-color: #fffcf3;
   z-index: 9999;
 }
@@ -28,6 +28,7 @@ header {
 }
 
 nav {
+  font-family: 'Syne',sans-serif;
   width: 100%;
   height: 100%;
   display: flex;
