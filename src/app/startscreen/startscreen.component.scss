@@ -1,8 +1,3 @@
-body {
-   
-    margin: 0; 
-    
-  }
 
 section {
   background-color: #fffcf3 !important;
@@ -10,7 +5,6 @@ section {
   flex-direction: column;
   margin: auto;
   max-width: 1920px;
-  width:100%;
   height: calc(100vh - 80px);
   
 
@@ -64,11 +58,28 @@ h3 {
     transform: rotate(180deg);
 }
 
-.scroll-down{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    >img {
-        width: 4vw;
-    }
+.scroll-down {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  
+  > img {
+      width: 2.5vw;
+  }
+
+  &.animate img {
+      animation: scrollAnimation 1s steps(4) infinite;
+  }
+}
+
+@keyframes scrollAnimation {
+  0% { content: url('./../../assets/img/scrolldown1.png'); }
+  20% { content: url('./../../assets/img/scrolldown2.png'); }
+  40% { content: url('./../../assets/img/scrolldown3.png'); }
+  60% { content: url('./../../assets/img/scrolldown4.png'); }
+  80% { content: url('./../../assets/img/scrolldown5.png'); }
+  100% { content: url('./../../assets/img/scrolldown1.png'); }
 }
