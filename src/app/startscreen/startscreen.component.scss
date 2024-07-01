@@ -4,8 +4,8 @@ section {
   flex-direction: column;
   margin: auto;
   margin-top: 5vh;
-  max-width: 1920px;
-  height: 92vh;
+  
+  box-sizing: border-box;
 
   > div {
     display: flex;
@@ -24,10 +24,10 @@ section {
 }
 
 .headline {
-  max-width: 100%;
+  box-sizing: border-box;
 
   > h1 {
-    font-size: 6vw;
+    font-size: 5vw;
     font-weight: 800;
     font-family: "Syne";
     text-align: center;
@@ -66,7 +66,7 @@ h3 {
   position: relative;
 
   > img {
-    // width: 2.5vw;
+    width: 4vw;
     animation: scrollAnimation 1s linear infinite;  
   }
 
