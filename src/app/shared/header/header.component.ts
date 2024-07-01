@@ -29,7 +29,7 @@ export class HeaderComponent {
   }
 
   playAnimation(opening: boolean) {
-    const interval = 150;
+    const interval = 100;
     let frameIndex = 0;
 
     const animation = setInterval(() => {

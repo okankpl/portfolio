@@ -1,30 +1,29 @@
-
 section {
   background-color: #fffcf3 !important;
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-top: 5vh;
   max-width: 1920px;
-  height: calc(100vh - 80px);
-  
+  height: 92vh;
 
-  >div {
+  > div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 5px;
-    width: 100%;
-    >.line{
-        height: 0.2vh;
-        width: 50%;
-        background-color: black;
-        margin-top: 0px;
+    max-width: 100%;
+    > .line {
+      height: 0.2vh;
+      width: 50%;
+      background-color: black;
+      margin-top: 0px;
     }
   }
 }
 
-.headline{
+.headline {
   max-width: 100%;
 
   > h1 {
@@ -48,14 +47,14 @@ h3 {
 }
 
 .under-section {
-    justify-content: space-between !important;
-    font-size: 1.5vw;
-    margin-top: 5%;
+  justify-content: space-between !important;
+  font-size: 1.5vw;
+  margin-top: 5%;
 }
 
-.email{
+.email {
   writing-mode: vertical-lr;
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .scroll-down {
@@ -65,21 +64,38 @@ h3 {
   align-items: center;
   flex-direction: column;
   position: relative;
-  
+
   > img {
-      width: 2.5vw;
+    width: 2.5vw;
   }
 
   &.animate img {
-      animation: scrollAnimation 1s steps(4) infinite;
+    animation: scrollAnimation 1s steps(4) infinite;
+  }
+}
+
+@media (max-width: 1200px) {
+  section {
+    margin-top: 10vh;
+  }
+}
+
+@media (max-width: 800px) {
+  section {
+    margin-top: 15vh;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    margin-top: 20vh;
   }
 }
 
 @keyframes scrollAnimation {
-  0% { content: url('./../../assets/img/scrolldown1.png'); }
-  20% { content: url('./../../assets/img/scrolldown2.png'); }
-  40% { content: url('./../../assets/img/scrolldown3.png'); }
-  60% { content: url('./../../assets/img/scrolldown4.png'); }
-  80% { content: url('./../../assets/img/scrolldown5.png'); }
-  100% { content: url('./../../assets/img/scrolldown1.png'); }
+  0%, 100% { content: url("./../../assets/img/scrolldown1.png"); }
+  20% { content: url("./../../assets/img/scrolldown2.png"); }
+  40% { content: url("./../../assets/img/scrolldown3.png"); }
+  60% { content: url("./../../assets/img/scrolldown4.png"); }
+  80% { content: url("./../../assets/img/scrolldown5.png"); }
 }

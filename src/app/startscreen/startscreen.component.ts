@@ -18,7 +18,7 @@ export class StartscreenComponent {
       this.animationInterval = setInterval(() => {
         frame = frame < 4 ? frame + 1 : 1;
         scrollImgElement.src = `./../../assets/img/scrolldown${frame}.png`;
-      }, 250); // Ändern Sie das Bild alle 250 ms
+      }, 250); 
     }
   }
 
