@@ -4,7 +4,6 @@ section {
   flex-direction: column;
   margin: auto;
   margin-top: 5vh;
-  ;
   box-sizing: border-box;
 
   > div {
@@ -67,10 +66,8 @@ h3 {
 
   > img {
     width: 4vw;
-    animation: scrollAnimation 1s linear infinite;  
+    animation: scrollAnimation 1s linear infinite;
   }
-
- 
 }
 
 @media (max-width: 1200px) {
@@ -92,10 +89,26 @@ h3 {
 }
 
 @keyframes scrollAnimation {
-  0%, 100% { content: url("./../../assets/img/scrolldown1.png"); }
-  16% { content: url("./../../assets/img/scrolldown2.png"); }
-  33% { content: url("./../../assets/img/scrolldown3.png"); }
-  50% { content: url("./../../assets/img/scrolldown4.png"); }
-  66% { content: url("./../../assets/img/scrolldown5.png"); }
-  83%{ content: url("./../../assets/img/scrolldown6.png"); }
+  0% {
+    content: url("./../../assets/img/scrolldown1.png");
+  }
+  16% {
+    content: url("./../../assets/img/scrolldown2.png");
+  }
+  33% {
+    content: url("./../../assets/img/scrolldown3.png");
+  }
+  50% {
+    content: url("./../../assets/img/scrolldown4.png");
+  }
+  66% {
+    content: url("./../../assets/img/scrolldown5.png");
+  }
+  83% {
+    content: url("./../../assets/img/scrolldown6.png");
+  }
+  100% {
+    content: url("./../../assets/img/scrolldown6.png");
+  }
+
 }

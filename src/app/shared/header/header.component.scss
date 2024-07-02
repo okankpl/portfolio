@@ -33,7 +33,14 @@ header {
   left: 0;
   right: 0;
   background-color: #fffcf3;
-  animation: slideDown 0.5s forwards;
+  animation: slideDown 1s forwards;
+}
+
+.overlay.inactive {
+  display: flex;
+  z-index: 9999;
+  height: 92vh;
+  animation: slideUp 1s forwards;
 }
 
 nav {
@@ -71,5 +78,14 @@ nav {
   }
   to {
     transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
   }
 }

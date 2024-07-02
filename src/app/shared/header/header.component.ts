@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, ElementRef } from '@angular/core';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 @Component({
@@ -9,43 +9,24 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
   menuActive: boolean = false;
-  currentFrame: number = 0;
-  frames: string[] = [
-    './../../../assets/img/burgermenu1.png',
-    './../../../assets/img/burgermenu2.png',
-    './../../../assets/img/burgermenu3.png',
-    './../../../assets/img/burgermenu4.png',
-    './../../../assets/img/burgermenu5.png',
-  ];
+
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
 
   toggleMenu() {
-    if (!this.menuActive) {
-      this.playAnimation(true);
+    const overlay = this.el.nativeElement.querySelector('.overlay');
+    if (this.menuActive) {
+      this.renderer.removeClass(overlay, 'active');
+      this.renderer.addClass(overlay, 'inactive');
     } else {
-      this.playAnimation(false);
+      this.renderer.removeClass(overlay, 'inactive');
+      this.renderer.addClass(overlay, 'active');
     }
+    this.menuActive = !this.menuActive;
   }
 
-  playAnimation(opening: boolean) {
-    const interval = 100;
-    let frameIndex = 0;
-
-    const animation = setInterval(() => {
-      this.currentFrame = opening ? frameIndex : this.frames.length - 1 - frameIndex;
-      frameIndex++;
-      if (frameIndex === this.frames.length) {
-        clearInterval(animation);
-        this.menuActive = opening;
-        if (!opening) {
-          this.currentFrame = 0; 
-        }
-      }
-    }, interval);
-  }
 
   getCurrentFrame() {
-    return this.frames[this.currentFrame];
+    return this.menuActive ? 'path/to/close-icon.png' : 'path/to/burger-icon.png';
   }
 }

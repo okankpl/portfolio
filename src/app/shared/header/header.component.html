@@ -1,10 +1,10 @@
 <header class="container">
-  <div><img class="logo" src="./../../../assets/img/logo.png" alt="" /></div>
+  <div><img class="logo" src="./../../../assets/img/logo.png" alt="Logo" /></div>
 
   <div class="burger-menu" (click)="toggleMenu()">
     <img [src]="getCurrentFrame()" alt="Burger Menu" />
   </div>
-  <div class="overlay" [class.active]="menuActive">
+  <div class="overlay" [class.active]="menuActive" [class.inactive]="!menuActive">
     <nav>
       <span>
         <a routerLink="/about-me">About Me</a>
