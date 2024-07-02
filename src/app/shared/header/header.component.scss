@@ -20,7 +20,8 @@ header {
 
 .overlay {
   display: none;
-  width:100%;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
 .overlay.active {
@@ -32,6 +33,7 @@ header {
   left: 0;
   right: 0;
   background-color: #fffcf3;
+  animation: slideDown 0.5s forwards;
 }
 
 nav {
@@ -43,11 +45,11 @@ nav {
   flex-direction: column;
   gap: 30px;
   margin-top: 5%;
-  >span{
-    
-    >a{
+  > span {
+    > a {
       font-size: 6vw;
       gap: 200px;
+      cursor: pointer;
     }
   }
 }
@@ -55,5 +57,19 @@ nav {
 .burger-menu {
   > img {
     width: 3vw;
+    cursor: pointer;
+  }
+  > img:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 300ms;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
