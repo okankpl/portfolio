@@ -30,17 +30,17 @@ header {
 nav {
   font-family: "Syne", sans-serif;
   width: 100%;
-  height: 100vh;
+  height: 92vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 30px;
-  margin-top: 5%;
+  margin-top: 2%;
   > span {
     text-align: center;
     position: relative; /* Parent needs to be positioned for absolute child positioning */
     > a {
-      width: 30vw;
+      width: 33vw;
       font-size: 6vw;
       gap: 200px;
       cursor: pointer;
@@ -57,7 +57,7 @@ nav {
       left: 0;
       bottom: 0;
       width: 20%; /* Length of the bottom part of the 'L' */
-      height: 2px; /* Thickness of the line */
+      height: 3px; /* Thickness of the line */
       background: black; /* Color of the line */
       transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Smooth transition for width and left position */
     }
@@ -67,7 +67,7 @@ nav {
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 2px; /* Thickness of the vertical part of the 'L' */
+      width: 3px; /* Thickness of the vertical part of the 'L' */
       height: 50%; /* Height of the vertical part of the 'L' */
       background: black; /* Color of the line */
       transition: height 0.3s ease-in-out; /* Smooth transition for height */
@@ -92,5 +92,24 @@ nav {
   > img:hover {
     transform: scale(1.05);
     transition: ease-in-out 300ms;
+  }
+}
+
+.say-hi{
+  width: 100vw;
+  color: white;
+  background: black;
+  transform: skewY(+5deg); /* Adjust the angle as needed */
+  transform-origin: top left;
+  height: 100%;
+
+  >div {
+    transform: skewY(-5deg); /* Adjust the angle as needed */
+    transform-origin: top left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 90%;
   }
 }
