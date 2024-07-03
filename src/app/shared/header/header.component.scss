@@ -40,8 +40,8 @@ nav {
     text-align: center;
     position: relative; /* Parent needs to be positioned for absolute child positioning */
     > a {
-      width: 33vw;
-      font-size: 6vw;
+      width: 22vw;
+      font-size: 4vw;
       gap: 200px;
       cursor: pointer;
       position: relative; /* Make sure the link is positioned for pseudo-elements */
@@ -52,7 +52,7 @@ nav {
     }
 
     > a::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: 0;
@@ -63,7 +63,7 @@ nav {
     }
 
     > a::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: 0;
@@ -95,21 +95,35 @@ nav {
   }
 }
 
-.say-hi{
+.say-hi {
   width: 100vw;
   color: white;
   background: black;
-  transform: skewY(+5deg); /* Adjust the angle as needed */
+  transform: skewY(+5deg);
   transform-origin: top left;
   height: 100%;
 
-  >div {
-    transform: skewY(-5deg); /* Adjust the angle as needed */
+  > div {
+    transform: skewY(-5deg);
     transform-origin: top left;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
     width: 90%;
+    height: 100%;
   }
+}
+
+h4,
+h2 {
+  cursor: pointer;
+}
+
+h4:hover,
+h2:hover {
+  cursor: pointer;
+  color: #ff9900;
+  transform: scale(1.05);
+  transition: ease-in-out 300ms;
 }
