@@ -3,8 +3,9 @@ section {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 5vh;
+  height: 100vh; 
   box-sizing: border-box;
+  padding-top: 8vh;
 
   > div {
     display: flex;
@@ -24,9 +25,9 @@ section {
 
 .headline {
   box-sizing: border-box;
-
   > h1 {
-    font-size: 5vw;
+    max-width: 1920px !important;
+    font-size: 64px;
     font-weight: 800;
     font-family: "Syne";
     text-align: center;
@@ -37,7 +38,7 @@ section {
 }
 
 h3 {
-  font-size: 4vw;
+  font-size: 36px;
   font-weight: 700;
   font-family: "Syne";
   color: #ff9900;
@@ -47,68 +48,55 @@ h3 {
 
 .under-section {
   justify-content: space-between !important;
-  font-size: 1.5vw;
-  margin-top: 5%;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.font-size-32{
+  font-weight: 400;
+  font-size: 18px !important;
+  letter-spacing: 0;
 }
 
 .email {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .scroll-down {
   text-align: center;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
-
-  > img {
-    width: 4vw;
-    animation: scrollAnimation 1s linear infinite;
-  }
+  overflow: hidden; 
+  height: 100px;
 }
 
-@media (max-width: 1200px) {
-  section {
-    margin-top: 10vh;
-  }
+.scroll-down > img {
+  width: 40px;
+  animation: scrollAnimation 2s linear infinite;
 }
 
-@media (max-width: 800px) {
-  section {
-    margin-top: 15vh;
-  }
-}
-
-@media (max-width: 600px) {
-  section {
-    margin-top: 20vh;
-  }
-}
 
 @keyframes scrollAnimation {
   0% {
-    content: url("./../../assets/img/scrolldown1.png");
+    transform: translateY(0);
+    opacity: 1;
   }
-  16% {
-    content: url("./../../assets/img/scrolldown2.png");
+  70% {
+    transform: translateY(100px);
+    opacity: 1;
   }
-  33% {
-    content: url("./../../assets/img/scrolldown3.png");
-  }
-  50% {
-    content: url("./../../assets/img/scrolldown4.png");
-  }
-  66% {
-    content: url("./../../assets/img/scrolldown5.png");
-  }
-  83% {
-    content: url("./../../assets/img/scrolldown6.png");
+  80% {
+    opacity: 0;
   }
   100% {
-    content: url("./../../assets/img/scrolldown6.png");
+    opacity: 0;
+    transform: translateY(0);
   }
-
 }
