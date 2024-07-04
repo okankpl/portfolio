@@ -2,11 +2,12 @@ body{
   margin: 0;
   background-color: #fffcf3 !important;
   justify-content: center;
-  scroll-behavior: smooth;
   box-sizing: border-box;
 
 }
-
+html {
+  scroll-behavior: smooth;
+}
 
 .container {
   max-width: 1920px;
