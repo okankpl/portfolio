@@ -21,6 +21,10 @@ section {
     justify-content: center;
     align-items: center;
   }
+  >span{
+    font-family: 'Overpass', sans-serif;
+    font-size: 20px;
+  }
 }
 .about-me-img {
   width: 40%;
@@ -39,6 +43,7 @@ section {
 
 .about-me-img::after {
   content: "";
+  box-sizing: border-box;
   position: absolute;
   top: -20px;
   right: -20px;
@@ -54,7 +59,7 @@ section {
 
 
 .about-me-img:hover::after {
-  opacity: 1;
+  opacity: 0.8;
 }
 div {
   > img {
