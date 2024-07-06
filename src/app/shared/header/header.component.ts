@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, Inject } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -30,22 +31,24 @@ export class HeaderComponent {
   animationInterval: any;
   isAnimating: boolean = false; // Neue Variable, um den Animationszustand zu speichern
 
+  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
+
   toggleMenu() {
-    if (this.isAnimating) return; // Blockiere, wenn eine Animation läuft
-
-    this.isAnimating = true; // Setze den Animationszustand auf aktiv
-
-    if (!this.menuActive) {
-      this.startAnimation(1, 5, () => {
-        this.menuActive = true;
-        this.isAnimating = false; // Setze den Animationszustand auf beendet
-      });
+    if (this.isAnimating) return;
+  
+    this.isAnimating = true;
+    this.menuActive = !this.menuActive;
+  
+    if (this.menuActive) {
+      this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
+      this.renderer.setStyle(this.document.body, 'height', '100%');
     } else {
-      this.startAnimation(5, 1, () => {
-        this.menuActive = false;
-        this.isAnimating = false; // Setze den Animationszustand auf beendet
-      });
+      this.renderer.removeStyle(this.document.body, 'overflow');
+      this.renderer.removeStyle(this.document.body, 'height');
     }
+    this.startAnimation(this.menuActive ? 1 : 5, this.menuActive ? 5 : 1, () => {
+      this.isAnimating = false;
+    });
   }
 
   startAnimation(start: number, end: number, callback: () => void) {

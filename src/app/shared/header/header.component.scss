@@ -21,10 +21,17 @@ header {
 .overlay {
   width: 100%;
   position: absolute;
-  top: 8vw;
+  top: 8vh;
   left: 0;
   right: 0;
   background-color: #fffcf3;
+  height: 100%;
+  
+}
+
+.no-scroll {
+  overflow: hidden !important;
+  height: 100%; /* Um zu verhindern, dass auf größeren Bildschirmen gescrollt wird */
 }
 
 nav {
@@ -35,13 +42,12 @@ nav {
   align-items: center;
   flex-direction: column;
   gap: 26px;
-  margin-top: 2%;
   > span {
     text-align: center;
     position: relative; /* Parent needs to be positioned for absolute child positioning */
     > a {
       width: 22vw;
-      font-size: 4vw;
+      font-size: 5vw;
       gap: 200px;
       cursor: pointer;
       position: relative; /* Make sure the link is positioned for pseudo-elements */
@@ -131,7 +137,7 @@ h2:hover {
   transition: ease-in-out 300ms;
 }
 h2 {
-  font-size: 4vw;
+  font-size: 52px;
 }
 
 

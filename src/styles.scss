@@ -16,6 +16,16 @@ html {
   background-color: #fffcf3 !important;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #FF9900;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background:#fffcf3;
+}
 
 /* You can add global styles to this file, and also import other style files */
 .font-syne {
