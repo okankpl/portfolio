@@ -1,5 +1,5 @@
 section {
-    width: 90%;
+    width: 70%;
     margin: auto;
     border: 5px solid black;
     position: relative; /* Nötig für das Pseudo-Element */
@@ -11,7 +11,7 @@ section {
     margin-bottom: 100px;
     height: auto;
     box-sizing: border-box;
-}
+  }
   
   section::before {
     content: "";
@@ -64,7 +64,29 @@ section {
       > img {
         height: 64px;
         width: 64px;
+        transition: transform 0.6s ease-in-out;
       }
+      > img:hover {
+        animation: orbit 1s infinite;
+      }
+    }
+  }
+  
+  @keyframes orbit {
+    0% {
+      transform: translateX(0) scale(1);
+    }
+    25% {
+      transform: translateX(20px) scale(0.9);
+    }
+    50% {
+      transform: translateX(0) scale(0.8);
+    }
+    75% {
+      transform: translateX(-20px) scale(0.9);
+    }
+    100% {
+      transform: translateX(0) scale(1);
     }
   }
   
@@ -76,9 +98,9 @@ section {
   h1:hover {
     color: #ff9900;
   }
-
-  @media (max-width:900px) {
+  
+  @media (max-width: 1000px) {
     h1 {
-        font-size: 50px;
+      font-size: 50px !important;
     }
   }
