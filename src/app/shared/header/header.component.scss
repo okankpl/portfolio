@@ -31,7 +31,7 @@ header {
 
 .no-scroll {
   overflow: hidden !important;
-  height: 100%; /* Um zu verhindern, dass auf größeren Bildschirmen gescrollt wird */
+  height: 100%;
 }
 
 nav {
@@ -44,16 +44,16 @@ nav {
   gap: 26px;
   > span {
     text-align: center;
-    position: relative; /* Parent needs to be positioned for absolute child positioning */
+    position: relative; 
     > a {
       width: 24vw;
       font-size: 5vw;
       gap: 200px;
       cursor: pointer;
-      position: relative; /* Make sure the link is positioned for pseudo-elements */
+      position: relative; 
       display: inline-block;
       padding-bottom: 5px;
-      padding-left: 5px; /* Space for the pseudo-element */
+      padding-left: 5px; 
       text-decoration: none;
     }
 
@@ -62,10 +62,10 @@ nav {
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 20%; /* Length of the bottom part of the 'L' */
-      height: 3px; /* Thickness of the line */
-      background: black; /* Color of the line */
-      transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Smooth transition for width and left position */
+      width: 20%; 
+      height: 3px; 
+      background: black; 
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
     }
 
     > a::after {
@@ -73,19 +73,19 @@ nav {
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 3px; /* Thickness of the vertical part of the 'L' */
-      height: 50%; /* Height of the vertical part of the 'L' */
-      background: black; /* Color of the line */
-      transition: height 0.3s ease-in-out; /* Smooth transition for height */
+      width: 3px; 
+      height: 50%; 
+      background: black; 
+      transition: height 0.3s ease-in-out; 
     }
 
     > a:hover::before {
-      width: 50%; /* Extend the bottom line to 50% width on hover */
-      left: 50%; /* Move the line to start from the middle and extend to the right */
+      width: 50%; 
+      left: 50%; 
     }
 
     > a:hover::after {
-      height: 0; /* Hide the vertical part on hover */
+      height: 0; 
     }
   }
 }

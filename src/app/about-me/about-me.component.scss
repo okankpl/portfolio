@@ -1,7 +1,7 @@
 section {
   margin: auto;
   width: 90%;
-  height: 70vh;
+  max-width: 1920px;
 }
 
 .about-me-container {
@@ -27,7 +27,7 @@ section {
   }
 }
 .about-me-img {
-  width: 40%;
+  width: 50%;
   position: relative;
   overflow: visible;
   z-index: 10;
@@ -91,14 +91,18 @@ a {
 .lets-talk-btn {
   width: 30%;
   height: 10%;
-  border: 3px solid black;
+  border: 5px solid black;
   border-radius: 4px;
+  >a{
+    font-size: 22px;
+  }
 }
 
 .lets-talk-btn:hover {
   transition: ease-in-out 200ms;
   width: 40%;
   > a {
+    font-size: 22px;
     font-weight: 700 !important;
   }
 }
