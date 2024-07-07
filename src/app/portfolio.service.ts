@@ -16,7 +16,7 @@ export class PortfolioService {
     { icon: 'css.png', name: 'Firebase' },
     { icon: 'firebase.png', name: 'GIT' },
     { icon: 'git.png', name: 'CSS' },
-    { icon: 'material.png', name: 'Material Design' },
+    { icon: 'material.png', name: 'Material' },
     { icon: 'api.png', name: 'Rest-Api' },     
     { icon: 'scrum.png', name: 'Scrum' }
   ];
