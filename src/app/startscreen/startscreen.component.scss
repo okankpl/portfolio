@@ -104,3 +104,12 @@ h3 {
     transform: translateY(0);
   }
 }
+
+@media(max-width:750px) {
+  h1{
+    font-size: 54px !important;
+  }
+  h3{
+    font-size: 32px;
+  }
+}

@@ -8,26 +8,30 @@ section {
   display: flex;
   width: 100%;
   gap: 28px;
+
 }
 
 .about-me {
-  width: 50%;
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 100px;
+  align-items: flex-start; 
+  gap: 20px; /* Adjusted gap */
   > div {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  >span{
+  > span {
     font-family: 'Overpass', sans-serif;
     font-size: 20px;
   }
 }
+
 .about-me-img {
-  width: 50%;
+  flex-shrink: 0; 
+  width: 500px; 
+  height: 500px; 
   position: relative;
   overflow: visible;
   z-index: 10;
@@ -36,10 +40,9 @@ section {
 .about-me-img img {
   border-radius: 10px;
   width: 100%;
-  height: 75%;
+  height: 100%;
   object-fit: cover;
 }
-
 
 .about-me-img::after {
   content: "";
@@ -48,26 +51,17 @@ section {
   top: -20px;
   right: -20px;
   background-image: url("./../../assets/img/rectangle.png");
-  background-size: 100% 100%;
-  width: 100%;
-  height: 75%;
+  background-size: cover;
+  width: 500px; /* Adjust width to cover the offset */
+  height: 500px; /* Adjust height to cover the offset */
   z-index: 1000;
   pointer-events: none;
-  opacity: 0; 
-  transition: opacity 0.4s ease-in-out; 
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
 }
-
 
 .about-me-img:hover::after {
   opacity: 0.8;
-}
-div {
-  > img {
-    border-radius: 10px;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-  }
 }
 
 h1 {
@@ -89,11 +83,12 @@ a {
 }
 
 .lets-talk-btn {
+  margin: auto;
   width: 30%;
   height: 10%;
   border: 5px solid black;
   border-radius: 4px;
-  >a{
+  > a {
     font-size: 22px;
   }
 }
@@ -105,4 +100,39 @@ a {
     font-size: 22px;
     font-weight: 700 !important;
   }
+}
+
+@media(max-width: 750px) {
+  .about-me-container{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .about-me-img {
+    margin: auto;
+  }
+
+  .about-me{
+    gap: 72px;
+  }
+  .lets-talk-btn {
+    height: 50px;
+  }
+}
+
+@media(max-width:550px) {
+  .about-me-img img, .about-me-img{
+    width: 400px;
+    height: 400px !important;
+  }
+  h1 {
+    text-align: center;
+    font-size: 48px;
+  }
+}
+
+.about-me-img::after {
+  width: 400px;
+  height: 400px;
+  top: -10px;
+  right: -10px;
 }
