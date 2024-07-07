@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from './../portfolio.service'
 
 @Component({
   selector: 'app-myskills',
   standalone: true,
-  imports: [],
   templateUrl: './myskills.component.html',
-  styleUrl: './myskills.component.scss'
+  styleUrls: ['./myskills.component.scss']
 })
-export class MyskillsComponent {
+export class MyskillsComponent implements OnInit {
+  skills: { icon: string; name: string; }[] = [];
 
-}
+  constructor(private portfolioService: PortfolioService) {}
+
+  ngOnInit() {
+    this.skills = this.portfolioService.skills;
+  }
+  }
