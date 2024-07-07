@@ -14,7 +14,7 @@ section {
     gap: 5px;
     max-width: 100%;
     > .line {
-      height: 0.2vh;
+      height: 3px;
       width: 50%;
       background-color: black;
       margin-top: 0px;
@@ -60,7 +60,7 @@ h3 {
 
 .font-size-32{
   font-weight: 400;
-  font-size: 18px !important;
+  font-size: 28px !important;
   letter-spacing: 0;
 }
 
@@ -68,7 +68,7 @@ h3 {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .scroll-down {
@@ -78,11 +78,12 @@ h3 {
   flex-direction: column;
   position: relative;
   overflow: hidden; 
-  height: 100px;
+  height: 140px;
+  text-align: center;
 }
 
 .scroll-down > img {
-  width: 40px;
+  width: 70px;
   animation: scrollAnimation 2s linear infinite;
 }
 
@@ -93,7 +94,7 @@ h3 {
     opacity: 1;
   }
   70% {
-    transform: translateY(100px);
+    transform: translateY(140px);
     opacity: 1;
   }
   80% {

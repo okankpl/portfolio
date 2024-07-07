@@ -21,7 +21,7 @@ export class PortfolioService {
     { icon: 'scrum.png', name: 'Scrum' }
   ];
 
-  projectList = [
+  projects = [
     {
       id: 0,
       img: './assets/img//join.png',

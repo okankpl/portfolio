@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from './../portfolio.service'
+import { PortfolioService } from './../portfolio.service';
 
 @Component({
   selector: 'app-myskills',

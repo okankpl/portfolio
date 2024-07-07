@@ -6,6 +6,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MyskillsComponent } from './myskills/myskills.component';
+import { ProjectsComponent } from './projects/projects.component';
+
 
 
 @Component({
@@ -14,7 +16,8 @@ import { MyskillsComponent } from './myskills/myskills.component';
   imports:
     [CommonModule, RouterOutlet,
       StartscreenComponent, FooterComponent,
-      HeaderComponent, AboutMeComponent,MyskillsComponent],
+      HeaderComponent, AboutMeComponent,
+      MyskillsComponent, ProjectsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
