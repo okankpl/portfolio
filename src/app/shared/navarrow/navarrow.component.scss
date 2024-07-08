@@ -16,8 +16,6 @@ div {
   position: absolute;
   right: 100px;
   transform-origin: top right;
-  animation: none;
-  cursor: pointer;
 }
 
 @keyframes growAndChange {
@@ -38,3 +36,4 @@ div {
 .animate {
   animation: growAndChange 2s forwards;
 }
+

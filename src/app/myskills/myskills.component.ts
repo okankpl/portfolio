@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from './../portfolio.service';
+import { NavArrowMirroredComponent } from '../shared/nav-arrow-mirrored/nav-arrow-mirrored.component';
 
 @Component({
+  imports: [NavArrowMirroredComponent],
   selector: 'app-myskills',
   standalone: true,
   templateUrl: './myskills.component.html',

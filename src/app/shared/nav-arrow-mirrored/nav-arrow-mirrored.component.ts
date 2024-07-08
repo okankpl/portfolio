@@ -1,12 +1,14 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 
+
 @Component({
-  selector: 'app-navarrow',
+  selector: 'app-nav-arrow-mirrored',
   standalone: true,
-  templateUrl: './navarrow.component.html',
-  styleUrls: ['./navarrow.component.scss']
+  imports: [],
+  templateUrl: './nav-arrow-mirrored.component.html',
+  styleUrl: './nav-arrow-mirrored.component.scss'
 })
-export class NavarrowComponent implements AfterViewInit {
+export class NavArrowMirroredComponent implements AfterViewInit {
   @ViewChild('arrowSection') arrowSection!: ElementRef;
 
   ngAfterViewInit() {
@@ -15,7 +17,7 @@ export class NavarrowComponent implements AfterViewInit {
         const arrow = this.arrowSection.nativeElement.querySelector('.arrow');
         if (entry.isIntersecting) {
           arrow.classList.add('animate');
-          observer.unobserve(this.arrowSection.nativeElement); 
+          observer.unobserve(this.arrowSection.nativeElement); // Stop observing after animation starts
         }
       });
     });

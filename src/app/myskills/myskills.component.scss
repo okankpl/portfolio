@@ -3,7 +3,7 @@
 
 section {
   @include widthHeight($h: auto, $w: 70%);
-  margin: auto auto 100px;
+  margin: auto auto;
   border: 5px solid black;
   position: relative;
   @include dFlex();
