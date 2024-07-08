@@ -1,16 +1,17 @@
+@import "./../../../assets/styles/variables.scss";
+@import "./../../../assets/styles/mixins.scss";
+
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
-  background-color: #fffcf3 !important;
+  background-color: $bgr_color !important;
   max-width: 1920px;
-  width: 90%;
-  height: 8vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include widthHeight($h:8vh,$w:90%);
+  @include dFlex($jc:space-between);
   > div {
     > .logo {
       height: 64px;
@@ -24,7 +25,7 @@ header {
   top: 8vh;
   left: 0;
   right: 0;
-  background-color: #fffcf3;
+  background-color: $bgr_color;
   height: 100%;
   
 }
@@ -36,8 +37,7 @@ header {
 
 nav {
   font-family: "Syne", sans-serif;
-  width: 100%;
-  height: 92vh;
+  @include widthHeight($h:92vh, $w:100%);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -48,12 +48,10 @@ nav {
     > a {
       width: 24vw;
       font-size: 5vw;
-      gap: 200px;
       cursor: pointer;
       position: relative; 
       display: inline-block;
-      padding-bottom: 5px;
-      padding-left: 5px; 
+      padding:0 0 5px 5px;
       text-decoration: none;
     }
 
@@ -62,8 +60,7 @@ nav {
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 20%; 
-      height: 3px; 
+      @include widthHeight($h:3px,$w:20%);
       background: black; 
       transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
     }
@@ -73,8 +70,7 @@ nav {
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 3px; 
-      height: 50%; 
+      @include widthHeight($h:50%,$w:3px);
       background: black; 
       transition: height 0.3s ease-in-out; 
     }
@@ -102,23 +98,19 @@ nav {
 }
 
 .say-hi {
-  width: 100vw;
   color: white;
   background: black;
   transform: skewY(+5deg);
   transform-origin: top left;
-  height: 100%;
+  @include widthHeight($h: 100%, $w: 100vw);
 
   > div {
     transform: skewY(-5deg);
     transform-origin: top left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include dFlex($jc: space-between);
     margin: auto;
-    width: 90%;
     max-width: 1920px;
-    height: 100%;
+    @include widthHeight($h: 100%, $w:90%);
   }
 }
 
@@ -132,7 +124,7 @@ h2 {
 h4:hover,
 h2:hover {
   cursor: pointer;
-  color: #ff9900;
+  color: $orange;
   transform: scale(1.05);
   transition: ease-in-out 300ms;
 }

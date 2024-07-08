@@ -1,38 +1,34 @@
+@import "./../../assets/styles/variables";
+@import "./../../assets/styles/mixins";
+
 section {
-  margin: auto;
+  margin: auto auto 50px;
   width: 90%;
   max-width: 1920px;
-  margin-bottom: 50px;
 }
 
 .about-me-container {
   display: flex;
   width: 100%;
   gap: 28px;
-
 }
 
 .about-me {
-  flex: 1; 
-  display: flex;
+  flex: 1;
+  @include dFlex($ai: flex-start, $g: 20px);
   flex-direction: column;
-  align-items: flex-start; 
-  gap: 20px; /* Adjusted gap */
   > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include dFlex();
   }
   > span {
-    font-family: 'Overpass', sans-serif;
+    font-family: "Overpass", sans-serif;
     font-size: 20px;
   }
 }
 
 .about-me-img {
-  flex-shrink: 0; 
-  width: 500px; 
-  height: 500px; 
+  flex-shrink: 0;
+  @include widthHeight($h: 500px, $w: 500px);
   position: relative;
   overflow: visible;
   z-index: 10;
@@ -40,8 +36,7 @@ section {
 
 .about-me-img img {
   border-radius: 10px;
-  width: 100%;
-  height: 100%;
+  @include widthHeight($h: 100%, $w: 100%);
   object-fit: cover;
 }
 
@@ -53,8 +48,7 @@ section {
   right: -20px;
   background-image: url("./../../assets/img/rectangle.png");
   background-size: cover;
-  width: 500px; /* Adjust width to cover the offset */
-  height: 500px; /* Adjust height to cover the offset */
+  @include widthHeight($h: 500px, $w: 500px);
   z-index: 1000;
   pointer-events: none;
   opacity: 0;
@@ -73,7 +67,7 @@ h1 {
 }
 
 h1:hover {
-  color: #ff9900;
+  color: $orange;
 }
 
 a {
@@ -85,7 +79,7 @@ a {
 
 .lets-talk-btn {
   margin: auto;
-  width: 220px;
+  @include widthHeight($h: 52px !important, $w: 220px);
   height: 10%;
   border: 5px solid black;
   border-radius: 4px;
@@ -103,23 +97,21 @@ a {
   }
 }
 
-@media(max-width:1200px)
-{
+@media (max-width: 1200px) {
   .about-me-img::after {
-    width: 400px;
-    height: 400px;
+    @include widthHeight($h: 400px, $w: 400px);
     top: -10px;
     right: -10px;
   }
 
-  .about-me-img img, .about-me-img{
-    width: 400px;
-    height: 400px !important;
+  .about-me-img img,
+  .about-me-img {
+    @include widthHeight($h: 400px, $w: 400px);
   }
 }
 
-@media(max-width: 750px) {
-  .about-me-container{
+@media (max-width: 750px) {
+  .about-me-container {
     flex-direction: column;
     gap: 50px;
   }
@@ -127,7 +119,7 @@ a {
     margin: auto;
   }
 
-  .about-me{
+  .about-me {
     gap: 72px;
   }
   .lets-talk-btn {
@@ -139,19 +131,17 @@ a {
   }
 }
 
-@media(max-width:550px) {
-  .about-me-img img, .about-me-img{
-    width: 400px;
-    height: 400px !important;
+@media (max-width: 550px) {
+  .about-me-img img,
+  .about-me-img {
+    @include widthHeight($h: 350px, $w: 350px);
   }
   h1 {
     font-size: 48px;
   }
   .about-me-img::after {
-    width: 400px;
-    height: 400px;
+    @include widthHeight($h: 350px, $w: 350px);
     top: -10px;
     right: -10px;
   }
 }
-

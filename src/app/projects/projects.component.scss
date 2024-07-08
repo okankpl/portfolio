@@ -1,0 +1,16 @@
+@import "./../../assets/styles/variables";
+@import "./../../assets/styles/mixins";
+
+h1{ font-family: 'Syne', sans-serif};
+
+
+section {
+    margin: auto auto 50px;
+    width: 90%;
+    max-width: 1920px;
+    font-family: 'Overpass', sans-serif;
+    >div {
+        @include dFlex();
+        flex-direction: column;
+    }
+  }
