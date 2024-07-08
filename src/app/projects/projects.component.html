@@ -12,7 +12,7 @@
     @for (project of projects; track $index) {
       <div class="portfolio-container {{ $index % 2 == 1 ? 'reverse' : '' }}">
         <div class="portfolio-img">
-          <img src="{{ project.img }}" alt="" />
+          <a href="{{project.projecturl}}" target="_blank"><img src="{{ project.img }}" alt="" /></a>
         </div>
         <div class="desc">
           <div>
@@ -21,6 +21,9 @@
             <p>
               {{ project.description }}
             </p>
+            <div>
+              <div>GitHub</div> <div>Test</div>
+            </div>
           </div>
         </div>
       </div>
