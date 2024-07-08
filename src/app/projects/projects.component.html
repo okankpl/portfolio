@@ -1,3 +1,4 @@
+<app-nav-arrow-mirrored></app-nav-arrow-mirrored>
 <section>
   <div>
     <h1>Portfolio</h1>
@@ -7,5 +8,18 @@
     </span>
   </div>
 
-  <div class="portfolio">@for (project of projects; track $index) { }</div>
+  <div class="portfolio">
+    @for (project of projects; track $index) {
+    <div class="portfolio-container">
+      <div class="portfolio-img">
+        <img src="{{project.img}}" alt="">
+      </div>
+      <span class="desc">
+        <span>
+          <h2>{{project.title}}</h2>
+          <h3>{{project.languages}}</h3>
+        </span>
+      </span>
+    </div>  
+  }</div>
 </section>

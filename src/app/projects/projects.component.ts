@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from './../portfolio.service'
+import { NavArrowMirroredComponent } from '../shared/nav-arrow-mirrored/nav-arrow-mirrored.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [],
+  imports: [NavArrowMirroredComponent],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })

@@ -24,16 +24,16 @@ export class PortfolioService {
   projects = [
     {
       id: 0,
-      img: './assets/img//join.png',
+      img: './../../assets/img/join.png',
       title: 'Join',
-      languages: 'Angular | TypeScript | HTML | CSS | Firebase',
+      languages: 'JavaScript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       projecturl: 'https://okan-kaplan.developerakademie.net/join/index.html',
       githuburl: 'https://github.com/maksmuehlbauer/Join_Gruppenarbeit'
     },
     { 
       id: 1,
-      img: './assets/img/my-projects/elpolloloco.png',
+      img: './../../assets/img/elpolloloco.png',
       title: 'Pollo Loco',
       languages: 'JavaScript | HTML | CSS',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
@@ -43,7 +43,7 @@ export class PortfolioService {
     
     {
       id: 3,
-      img: './assets/img/my-projects/pokedex.png',
+      img: './../../assets/img/pokedex.png',
       title: 'Pokédex',
       languages: 'JavaScript | HTML | CSS | Api ',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',

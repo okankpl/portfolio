@@ -8,9 +8,8 @@ h1 {
 }
 
 h1:hover {
-    color: $orange;
-  }
-  
+  color: $orange;
+}
 
 section {
   font-size: 20px;
@@ -22,4 +21,33 @@ section {
     @include dFlex();
     flex-direction: column;
   }
+}
+
+.portfolio-img {
+  img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.portfolio {
+  width: 100% !important;
+  @include dFlex();
+}
+
+.portfolio-container {
+  @include dFlex($g: 44px);
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+}
+
+.desc {
+  @include dFlex();
+  flex-direction: column;
+}
+
+h2,
+h3 {
+  margin: 0;
 }
