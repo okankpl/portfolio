@@ -14,37 +14,36 @@ h1:hover {
 section {
   font-size: 20px;
   margin: auto auto 50px;
-  width: 90%;
+  width: 80%;
   max-width: 1920px;
   font-family: "Overpass", sans-serif;
   > div {
     @include dFlex();
     flex-direction: column;
+    width: 100%;
   }
 }
 
 .portfolio-img {
+    @include dFlex($ai:flex-end);
+    width: 100%;
   img {
     width: 400px;
     height: 400px;
   }
 }
 
-.portfolio {
-  width: 100% !important;
-  @include dFlex();
-}
-
 .portfolio-container {
-  @include dFlex($g: 44px);
+  @include dFlex($g: 20px);
   flex-direction: row;
-  width: 100%;
   margin: 0;
+  width: 100%;
 }
 
 .desc {
-  @include dFlex();
+  @include dFlex($ai:flex-start);
   flex-direction: column;
+  width: 100%;
 }
 
 h2,
