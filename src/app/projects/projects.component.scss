@@ -60,7 +60,7 @@ section {
   right: -20px;
   bottom: -20px;
   left: -20px;
-  background-image: url("./../../assets/img/rectangle.png");
+  background-image: url("./../../assets/img/rectangle.png"); // statt eines bildes einfach ein leerer div container mit einer border ?
   background-size: cover;
   width: calc(100% + 40px);
   height: calc(100% + 40px);
