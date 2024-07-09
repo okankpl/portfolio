@@ -11,6 +11,7 @@ import { NavArrowMirroredComponent } from '../shared/nav-arrow-mirrored/nav-arro
 })
 export class MyskillsComponent implements OnInit {
   skills: { icon: string; name: string; }[] = [];
+width: any;
 
   constructor(private portfolioService: PortfolioService) {}
 

@@ -14,7 +14,7 @@ header {
   @include dFlex($jc:space-between);
   > div {
     > .logo {
-      height: 64px;
+      height: 90px;
     }
   }
 }
@@ -88,7 +88,7 @@ nav {
 
 .burger-menu {
   > img {
-    width: 32px;
+    width: 48px;
     cursor: pointer;
   }
   > img:hover {
@@ -136,6 +136,7 @@ h2 {
 .links {
   > a {
     > img {
+      height: 48px;
       transition: transform 0.3s ease-in-out;
     }
   }
