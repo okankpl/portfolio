@@ -25,7 +25,6 @@ section {
 }
 
 .portfolio-img {
-  
   position: relative;
   flex: 1;
   @include dFlex();
@@ -33,14 +32,13 @@ section {
 
 .portfolio-img a {
   display: block;
-  @include widthHeight($w:100%, $h:100%);
+  @include widthHeight(100%, 100%);
 }
 
 .portfolio-img img {
   border-radius: 5px;
-  @include widthHeight($w:100%, $h:100%);
-  max-height: 400px;
-  object-fit: cover;
+  @include widthHeight(100%, 100%);
+  aspect-ratio: 4/3 !important;
   filter: grayscale(65%);
   transition: filter 0.5s ease;
 }
@@ -49,33 +47,66 @@ section {
   filter: grayscale(0%);
 }
 
-.portfolio-img::before {
-  content: "";
+.hover-box {
   position: absolute;
-  border: 5px solid black;
-  max-height: 400px;
-  @include widthHeight($w:100%, $h:100%);
-  z-index: 1000;
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  @include widthHeight(100%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
   transform: translate(0, 0);
+  pointer-events: none;
+}
+
+.hover-border {
+  position: absolute;
+  border: 5px solid black;
+  @include widthHeight(100%, 100%);
   box-sizing: border-box;
 }
 
-.portfolio-img:hover::before {
-  opacity: 0.8;
+.arrow-box {
+  background: url('./../../assets/img/arrowbox.png') no-repeat center center;
+  background-size: contain;
+  @include widthHeight(60px, 60px);
+  z-index: 2;
+  position: absolute;
+  right: -30px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.4s ease-in-out;
+}
+
+.portfolio-container.reverse .arrow-box {
+  left: -30px; /* Adjust as needed for reverse */
+  right: auto;
+}
+
+.portfolio-img:hover .hover-box {
+  opacity: 1;
   transform: translate(20px, -20px);
 }
 
-.portfolio-container.reverse .portfolio-img:hover::before {
-  opacity: 0.8;
+.portfolio-img:hover .arrow-box {
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.portfolio-container.reverse .portfolio-img:hover .hover-box {
   transform: translate(-20px, -20px);
 }
 
+.portfolio-container.reverse .portfolio-img:hover .arrow-box {
+  transform: translateY(-50%) rotate(360deg);
+}
+
 .portfolio-container {
+  display: flex;
   flex-direction: row;
-  @include dFlex($ai:stretch, $g: 50px);
+  align-items: stretch;
+  @include dFlex($ai: stretch, $g: 50px);
   margin-bottom: 100px;
 }
 
