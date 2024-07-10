@@ -64,6 +64,6 @@ export class HeaderComponent {
   }
 
   getCurrentFrame() {
-    return `./../../assets/img/burgermenu${this.currentFrame}.png`;
+    return `./assets/img/burgermenu${this.currentFrame}.png`;
   }
 }

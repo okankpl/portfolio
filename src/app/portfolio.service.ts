@@ -24,7 +24,7 @@ export class PortfolioService {
   projects = [
     {
       id: 0,
-      img: './../../assets/img/join.png',
+      img: './assets/img/join.png',
       title: 'Join',
       languages: 'JavaScript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
@@ -33,7 +33,7 @@ export class PortfolioService {
     },
     { 
       id: 1,
-      img: './../../assets/img/elpolloloco.png',
+      img: './assets/img/elpolloloco.png',
       title: 'Pollo Loco',
       languages: 'JavaScript | HTML | CSS',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
@@ -43,7 +43,7 @@ export class PortfolioService {
     
     {
       id: 3,
-      img: './../../assets/img/pokedex.png',
+      img: './assets/img/pokedex.png',
       title: 'Pokédex',
       languages: 'JavaScript | HTML | CSS | Api ',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',

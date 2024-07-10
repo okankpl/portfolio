@@ -69,14 +69,14 @@ section {
 }
 
 .arrow-box {
-  background: url('./assets/img/arrowbox.png') no-repeat center center;
+  background: url('./../../assets/img/arrowbox.png') no-repeat center center;
   background-size: contain;
   @include widthHeight(60px, 60px);
   z-index: 2;
   position: absolute;
   right: -30px; /* Adjust as needed */
   top: 50%;
-  transform: translateY(-50%) rotate(0deg);
+  transform: translateY(-50%) rotate(120deg);
   transition: transform 0.4s ease-in-out;
 }
 
