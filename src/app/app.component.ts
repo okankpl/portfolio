@@ -22,6 +22,5 @@ import { ProjectsComponent } from './projects/projects.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'portfolio';
-  width: { [klass: string]: any; } | null | undefined;
+
 }

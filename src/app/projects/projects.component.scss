@@ -1,5 +1,6 @@
 @import "./../../assets/styles/variables";
 @import "./../../assets/styles/mixins";
+@import "./../../assets/styles/button.styles.scss";
 
 h1 {
   font-family: "Syne", sans-serif;
@@ -9,6 +10,25 @@ h1 {
 
 h1:hover {
   color: $orange;
+}
+
+p{
+  font-size: 22px;
+}
+
+.btn {
+  margin: 0 !important;
+  width: 120px !important;
+}
+
+.btn:hover {
+  width: 160px !important;
+  transition: ease-in-out 300ms;
+}
+
+.btn-container {
+  @include dFlex($g: 10px);
+  width: 100%;
 }
 
 section {
@@ -69,7 +89,7 @@ section {
 }
 
 .arrow-box {
-  background: url('./../../assets/img/arrowbox.png') no-repeat center center;
+  background: url("./../../assets/img/arrowbox.png") no-repeat center center;
   background-size: contain;
   @include widthHeight(60px, 60px);
   z-index: 2;
@@ -99,7 +119,7 @@ section {
 }
 
 .portfolio-container.reverse .portfolio-img:hover .arrow-box {
-  transform: translateY(-50%) rotate(360deg);
+  transform: translateY(-50%) rotate(270deg);
 }
 
 .portfolio-container {
@@ -119,6 +139,12 @@ section {
   @include dFlex();
   flex-direction: column;
   padding: 10px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.portfolio-container:hover .desc {
+  opacity: 1;
 }
 
 h2,
@@ -133,4 +159,36 @@ h2 {
 h3 {
   font-size: 28px;
   color: $orange;
+}
+
+@media (max-width:1100px) {
+ h3{
+  font-size: 24px;
+ } 
+}
+
+@media (max-width: 950px) {
+  .portfolio-container,
+  .portfolio-container.reverse {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+
+  .desc{
+    opacity: 1;
+  }
+}
+@media (max-width: 450px) {
+  .hover-box,
+  .arrow-box {
+    display: none;
+  }
+  .btn:hover {
+    width: 120px !important;
+  }
 }

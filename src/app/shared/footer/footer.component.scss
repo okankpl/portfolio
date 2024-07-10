@@ -1,0 +1,76 @@
+@import "./../../../assets/styles/variables.scss";
+@import "./../../../assets/styles/mixins.scss";
+
+section {
+  position: relative;
+}
+
+footer {
+  font-family: 'Syne', sans-serif;
+  color: white;
+  background-color: black;
+  height: 70vh;
+  overflow: hidden !important;
+  position: relative;
+  @include dFlex();
+}
+
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  transform: skewY(5deg);
+  transform-origin: top left;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  background-color: black !important;
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  transform: skewY(-5deg);
+  transform-origin: top left;
+  @include dFlex($jc: space-between);
+}
+
+.logo, .logo img {
+  width: 64px;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+  > a {
+    > img {
+      height: 48px;
+      transition: transform 0.3s ease-in-out;
+    }
+    > img:hover {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.under-section {
+  @include dFlex($jc: space-between);
+}
+
+h4, h2, h3, h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  &:hover {
+    color: $orange;
+    transform: scale(1.05);
+    transition: ease-in-out 300ms;
+  }
+}
+
+h2 {
+  font-size: 52px;
+}

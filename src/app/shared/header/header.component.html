@@ -8,15 +8,18 @@
   </div>
   <div class="overlay" [@toggleOverlay]="menuActive ? 'active' : 'inactive'">
     <nav>
-      <span>
-        <a routerLink="/about-me">About Me</a>
-      </span>
-      <span>
-        <a routerLink="/mySkills">My Skills</a>
-      </span>
-      <span>
-        <a routerLink="/projects">Projects</a>
-      </span>
+      <div>
+        <span>
+          <a routerLink="/about-me">About Me</a>
+        </span>
+        <span>
+          <a routerLink="/mySkills">My Skills</a>
+        </span>
+        <span>
+          <a routerLink="/projects">Projects</a>
+        </span>
+      </div>
+
       <div class="say-hi">
         <div>
           <div>
@@ -30,7 +33,10 @@
             <a href="mailto:okan149@gmail.com" target="_blank">
               <img src="./assets/img/email.png" alt="E-Mail" />
             </a>
-            <a href="https://www.linkedin.com/in/okan-kaplan-11b50a27b/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/okan-kaplan-11b50a27b/"
+              target="_blank"
+            >
               <img src="./assets/img/linkedin.png" alt="LinkedIn" />
             </a>
           </div>

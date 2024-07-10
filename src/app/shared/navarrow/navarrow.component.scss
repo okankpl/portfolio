@@ -37,3 +37,8 @@ div {
   animation: growAndChange 2s forwards;
 }
 
+@media (max-width: 500px) {
+  .arrow {
+    right: 0;
+  }
+}

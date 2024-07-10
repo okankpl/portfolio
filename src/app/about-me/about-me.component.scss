@@ -1,5 +1,6 @@
 @import "./../../assets/styles/variables";
 @import "./../../assets/styles/mixins";
+@import "./../../assets/styles/button.styles.scss";
 
 section {
   margin: auto auto 50px;
@@ -53,6 +54,7 @@ section {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
+  overflow: hidden;
 }
 
 .about-me-img:hover::after {
@@ -68,33 +70,6 @@ h1 {
 
 h1:hover {
   color: $orange;
-}
-
-a {
-  font-family: "Overpass", sans-serif;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-
-.lets-talk-btn {
-  margin: auto;
-  @include widthHeight($h: 52px !important, $w: 220px);
-  height: 10%;
-  border: 5px solid black;
-  border-radius: 4px;
-  > a {
-    font-size: 22px;
-  }
-}
-
-.lets-talk-btn:hover {
-  transition: ease-in-out 200ms;
-  width: 260px;
-  > a {
-    font-size: 22px;
-    font-weight: 700 !important;
-  }
 }
 
 @media (max-width: 1200px) {
@@ -122,9 +97,6 @@ a {
   .about-me {
     gap: 72px;
   }
-  .lets-talk-btn {
-    height: 50px;
-  }
 
   h1 {
     text-align: center;
@@ -141,6 +113,18 @@ a {
   }
   .about-me-img::after {
     @include widthHeight($h: 350px, $w: 350px);
+    top: -10px;
+    right: -10px;
+  }
+}
+
+@media(max-width: 450px) {
+  .about-me-img img,
+  .about-me-img {
+    @include widthHeight($h: 300px, $w: 300px);
+  }
+  .about-me-img::after {
+    @include widthHeight($h: 300px, $w: 300px);
     top: -10px;
     right: -10px;
   }

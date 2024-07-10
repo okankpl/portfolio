@@ -9,10 +9,10 @@ section {
   height: 100vh; 
   box-sizing: border-box;
   padding-top: 8vh;
+  width: 90%;
   > div {
     @include dFlex($g:5px);
     flex-direction: row;
-    max-width: 100%;
     > .line {
       @include widthHeight($h: 3px, $w:50%);
       background-color: black;
@@ -108,5 +108,11 @@ h3 {
   }
   h3{
     font-size: 32px;
+  }
+}
+
+@media(max-width:450px) {
+  h1{
+    font-size: 40px !important;
   }
 }

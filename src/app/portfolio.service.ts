@@ -37,7 +37,7 @@ export class PortfolioService {
       title: 'Pollo Loco',
       languages: 'JavaScript | HTML | CSS',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      projecturl: 'https://okan-kaplan.developerakademie.net/el-pollo-loco/index.html',
+      projecturl: 'https://join.okan-kaplan.de/',
       githuburl: 'https://github.com/okankpl/EL-POLLO-LOCO'
     },
     
@@ -47,7 +47,7 @@ export class PortfolioService {
       title: 'Pokédex',
       languages: 'JavaScript | HTML | CSS | Api ',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      projecturl: 'https://okan-kaplan.developerakademie.net/Pokedex/index.html',
+      projecturl: 'https://pokedex.okan-kaplan.de/',
       githuburl: 'https://github.com/okankpl/Pokedex'
     },
    

@@ -1,0 +1,36 @@
+@import "./mixins";
+
+.btn {
+  cursor: pointer;
+  @include dFlex();
+  margin: auto;
+  @include widthHeight($h: 52px !important, $w: 220px);
+  height: 10%;
+  border: 5px solid black;
+  border-radius: 4px;
+  > a {
+    font-size: 22px;
+  }
+}
+
+.btn:hover {
+  transition: ease-in-out 200ms;
+  width: 260px;
+  > a {
+    font-size: 22px;
+    font-weight: 700 !important;
+  }
+}
+
+a {
+  font-family: "Overpass", sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+@media (max-width: 750px) {
+  .btn {
+    height: 50px;
+  }
+}
