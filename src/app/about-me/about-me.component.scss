@@ -46,7 +46,7 @@ section {
   position: absolute;
   top: -20px;
   right: -20px;
-  background-image: url("./../../assets/img/rectangle.png");
+  background-image: url("./assets/img/rectangle.png");
   background-size: cover;
   @include widthHeight($h: 500px, $w: 500px);
   z-index: 1000;
