@@ -23,15 +23,15 @@
   @keyframes growAndChange {
     0% {
       transform: translate(0, 0) scaleX(-1);
-      background-image: url("./../../../assets/img/nav-arrow.png");
+      background-image: url("./assets/img/nav-arrow.png");
     }
     50% {
       transform: translate(60px, 60px) scaleX(-1);
-      background-image: url("./../../../assets/img/nav-arrow2.png");
+      background-image: url("./assets/img/nav-arrow2.png");
     }
     100% {
       transform: translate(60px, 60px) scaleX(-1); 
-      background-image: url("./../../../assets/img/nav-arrow2.png");
+      background-image: url("./assets/img/nav-arrow2.png");
     }
   }
   
