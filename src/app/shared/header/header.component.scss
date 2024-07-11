@@ -1,6 +1,18 @@
 @import "./../../../assets/styles/variables.scss";
 @import "./../../../assets/styles/mixins.scss";
 
+section{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: $bgr_color;
+  box-sizing: border-box;
+  height: 8vh;
+  z-index: 9000;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -9,6 +21,7 @@ header {
   z-index: 9999;
   background-color: $bgr_color !important;
   max-width: 1920px;
+  margin: auto;
   @include widthHeight($h: 8vh, $w: 90%);
   @include dFlex($jc: space-between);
   > div {

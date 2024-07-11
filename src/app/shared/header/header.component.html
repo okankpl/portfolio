@@ -1,47 +1,49 @@
-<header class="container">
-  <div>
-    <img class="logo" src="./assets/img/logo.png" alt="Logo" />
-  </div>
+<section>
+  <header>
+    <div>
+      <img class="logo" src="./assets/img/logo.png" alt="Logo" />
+    </div>
 
-  <div class="burger-menu" (click)="toggleMenu()">
-    <img [src]="getCurrentFrame()" alt="Burger Menu" />
-  </div>
-  <div class="overlay" [@toggleOverlay]="menuActive ? 'active' : 'inactive'">
-    <nav>
-      <div>
-        <span>
-          <a routerLink="/about-me">About Me</a>
-        </span>
-        <span>
-          <a routerLink="/mySkills">My Skills</a>
-        </span>
-        <span>
-          <a routerLink="/projects">Projects</a>
-        </span>
-      </div>
-
-      <div class="say-hi">
+    <div class="burger-menu" (click)="toggleMenu()">
+      <img [src]="getCurrentFrame()" alt="Burger Menu" />
+    </div>
+    <div class="overlay" [@toggleOverlay]="menuActive ? 'active' : 'inactive'">
+      <nav>
         <div>
+          <span>
+            <a routerLink="/about-me">About Me</a>
+          </span>
+          <span>
+            <a routerLink="/mySkills">My Skills</a>
+          </span>
+          <span>
+            <a routerLink="/projects">Projects</a>
+          </span>
+        </div>
+
+        <div class="say-hi">
           <div>
-            <h2>Say Hi!</h2>
-            <h4>okan149&#64;gmail.com</h4>
-          </div>
-          <div class="links">
-            <a href="https://github.com/okankpl/" target="_blank">
-              <img src="./assets/img/github.png" alt="GitHub" />
-            </a>
-            <a href="mailto:okan149@gmail.com" target="_blank">
-              <img src="./assets/img/email.png" alt="E-Mail" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/okan-kaplan-11b50a27b/"
-              target="_blank"
-            >
-              <img src="./assets/img/linkedin.png" alt="LinkedIn" />
-            </a>
+            <div>
+              <h2>Say Hi!</h2>
+              <h4>okan149&#64;gmail.com</h4>
+            </div>
+            <div class="links">
+              <a href="https://github.com/okankpl/" target="_blank">
+                <img src="./assets/img/github.png" alt="GitHub" />
+              </a>
+              <a href="mailto:okan149@gmail.com" target="_blank">
+                <img src="./assets/img/email.png" alt="E-Mail" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/okan-kaplan-11b50a27b/"
+                target="_blank"
+              >
+                <img src="./assets/img/linkedin.png" alt="LinkedIn" />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </div>
-</header>
+      </nav>
+    </div>
+  </header>
+</section>

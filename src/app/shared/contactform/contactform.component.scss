@@ -40,6 +40,7 @@ input[type=submit]:hover {
   background-color: black !important;
   padding: 20px;
   font-family: 'Overpass', sans-serif !important;
+  max-width: 500px;
 }
 
 form {
@@ -47,4 +48,12 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.headline-text-container {
+  text-align: center;
+}
+
+h2{
+  color: orange;
 }
