@@ -1,8 +1,9 @@
 <section>
   <header>
-    <div>
-      <img class="logo" src="./assets/img/logo.png" alt="Logo" />
-    </div>
+    <a href="#"
+      ><div>
+        <img class="logo" src="./assets/img/logo.png" alt="Logo" /></div
+    ></a>
 
     <div class="burger-menu" (click)="toggleMenu()">
       <img [src]="getCurrentFrame()" alt="Burger Menu" />
@@ -11,13 +12,13 @@
       <nav>
         <div>
           <span>
-            <a routerLink="/about-me">About Me</a>
+            <a (click)="closeMenu()" href="#aboutMe">About Me</a>
           </span>
           <span>
-            <a routerLink="/mySkills">My Skills</a>
+            <a (click)="closeMenu()" href="#mySkills">My Skills</a>
           </span>
           <span>
-            <a routerLink="/projects">Projects</a>
+            <a (click)="closeMenu()" href="#projects">Projects</a>
           </span>
         </div>
 

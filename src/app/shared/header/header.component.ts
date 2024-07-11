@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { DOCUMENT } from '@angular/common';
 
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -29,7 +30,7 @@ export class HeaderComponent {
   menuActive: boolean = false;
   currentFrame: number = 1;
   animationInterval: any;
-  isAnimating: boolean = false; // Neue Variable, um den Animationszustand zu speichern
+  isAnimating: boolean = false;
 
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
 
@@ -65,5 +66,9 @@ export class HeaderComponent {
 
   getCurrentFrame() {
     return `./assets/img/burgermenu${this.currentFrame}.png`;
+  }
+
+  closeMenu() {
+    this.toggleMenu();
   }
 }

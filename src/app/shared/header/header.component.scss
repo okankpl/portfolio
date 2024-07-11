@@ -1,7 +1,7 @@
 @import "./../../../assets/styles/variables.scss";
 @import "./../../../assets/styles/mixins.scss";
 
-section{
+section {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,7 +9,7 @@ section{
   width: 100%;
   background-color: $bgr_color;
   box-sizing: border-box;
-  height: 8vh;
+  height: 10vh;
   z-index: 9000;
 }
 
@@ -22,23 +22,24 @@ header {
   background-color: $bgr_color !important;
   max-width: 1920px;
   margin: auto;
-  @include widthHeight($h: 8vh, $w: 90%);
+  @include widthHeight($h: 10vh, $w: 90%);
   @include dFlex($jc: space-between);
-  > div {
-    > .logo {
-      height: 80px;
+  > a {
+    > div {
+      > .logo {
+        height: 80px;
+      }
     }
   }
 }
 
 .overlay {
-  width: 100%;
+  @include widthHeight($h: 100%, $w: 100%);
   position: absolute;
   top: 8vh;
   left: 0;
   right: 0;
   background-color: $bgr_color;
-  height: 100%;
 }
 
 .no-scroll {
@@ -54,13 +55,14 @@ nav {
   flex-direction: column;
   gap: 26px;
   > div {
-    @include dFlex($g:30px);
+    @include dFlex($g: 30px);
     flex-direction: column;
     min-height: 50%;
     > span {
       text-align: center;
       position: relative;
       > a {
+        color: black;
         width: 28vw;
         font-size: 6vw;
         cursor: pointer;
