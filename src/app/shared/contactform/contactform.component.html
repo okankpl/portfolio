@@ -4,28 +4,45 @@
     <h4>Say Hello! let's discuss your ideas an make it happen</h4>
   </div>
 
-  <form (ngSubmit)="onSubmit()">
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <input
       [(ngModel)]="contactData.name"
       type="text"
       id="name"
       name="name"
       placeholder="Your name"
+      required
+      #name="ngModel"
     />
+    @if (!name.valid && name.touched) {
+    <span style="color: orange">Please enter a valid email</span>
+    }
     <input
-    [(ngModel)]="contactData.email"
+      #email="ngModel"
+      [(ngModel)]="contactData.email"
+      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
       type="email"
       id="email"
       name="email"
       placeholder="Your email"
+      required
     />
+    @if (!email.valid && email.touched) {
+    <span style="color: orange">Please enter a name</span>
+    }
     <textarea
-    [(ngModel)]="contactData.message"
+      [(ngModel)]="contactData.message"
+      #message="ngModel"
       id="message"
       name="message"
       placeholder="Your Message"
       style="height: 200px"
+      required
     ></textarea>
+    @if (!message.valid && message.touched) {
+    <span style="color: orange">Please enter a message</span>
+    }
+
     <p>
       I've read the <span style="color: orange">privacy policy</span> and agree
       to the procesing of my data as outlined
