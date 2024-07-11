@@ -2,10 +2,9 @@
 @import "./../../../assets/styles/mixins.scss";
 
 footer {
-  font-family: 'Syne', sans-serif;
+  font-family: "Syne", sans-serif;
   color: white;
   background-color: black;
-  height: 70vh;
   overflow: hidden !important;
   position: relative;
   transform-origin: top left;
@@ -13,26 +12,26 @@ footer {
   flex-direction: column;
 }
 
-
 .container {
   position: relative;
   z-index: 2;
   background-color: black !important;
-  @include widthHeight($h:100%, $w:90%);
+  @include widthHeight($h: 100%, $w: 90%);
   display: flex;
   flex-direction: column;
 }
 
-.logo, .logo img {
+.logo,
+.logo img {
   width: 64px;
 }
 
 .links {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   > a {
     > img {
-      height: 48px;
+      height: 32px;
       transition: transform 0.3s ease-in-out;
     }
     > img:hover {
@@ -43,9 +42,13 @@ footer {
 
 .under-section {
   @include dFlex($jc: space-between);
+  margin-bottom: 10px;
 }
 
-h4, h2, h3, h1 {
+h4,
+h2,
+h3,
+h1 {
   margin-block-start: 0;
   margin-block-end: 0;
   &:hover {
@@ -56,4 +59,21 @@ h4, h2, h3, h1 {
 
 h2 {
   font-size: 52px;
+}
+
+.copyright {
+  height: 12px;
+}
+
+.legal-notice {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 30px;
+  >a{
+    text-decoration: none;
+    color: white;
+  }
+  >a:hover {
+    color:$orange;
+  }
 }

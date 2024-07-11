@@ -1,0 +1,50 @@
+input[type=text], input[type=email], select, textarea {
+  width: 100%; 
+  padding: 12px;
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical;
+  font-family: 'Overpass', sans-serif !important;
+  background-color: black;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  opacity: 1;
+}
+
+/* Spezifisches Styling für die Platzhaltertexte */
+input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeholder {
+  color: white;
+  opacity: 1; /* Stellen Sie sicher, dass die Platzhalter nicht transparent sind */
+}
+
+input[type=submit] {
+  height: 50px;
+  width: 150px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: auto;
+  transition: ease-in-out 300ms;
+}
+
+input[type=submit]:hover {
+  width: 180px;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: black !important;
+  padding: 20px;
+  font-family: 'Overpass', sans-serif !important;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
