@@ -1,0 +1,30 @@
+{
+    "PRIVACY_POLICY": {
+      "TITLE": "Datenschutzerklärung",
+      "LAST_UPDATED": "Zuletzt aktualisiert: 11. Juli 2024",
+      "DESCRIPTION": "Diese Datenschutzerklärung beschreibt unsere Richtlinien und Verfahren zur Erfassung, Nutzung und Offenlegung Ihrer Informationen, wenn Sie den Dienst nutzen, und informiert Sie über Ihre Datenschutzrechte und wie das Gesetz Sie schützt.",
+      "IMPROVE_SERVICE": "Wir verwenden Ihre personenbezogenen Daten, um den Dienst bereitzustellen und zu verbessern. Durch die Nutzung des Dienstes stimmen Sie der Erfassung und Nutzung von Informationen gemäß dieser Datenschutzerklärung zu. Diese Datenschutzerklärung wurde mit Hilfe des Free Privacy Policy Generator erstellt.",
+      "INTERPRETATION_DEFINITIONS": {
+        "TITLE": "Interpretation und Definitionen",
+        "INTERPRETATION": {
+          "TITLE": "Interpretation",
+          "DESCRIPTION": "Die Wörter, deren Anfangsbuchstaben groß geschrieben sind, haben die unten definierten Bedeutungen. Die folgenden Definitionen haben unabhängig davon, ob sie im Singular oder im Plural erscheinen, die gleiche Bedeutung."
+        },
+        "DEFINITIONS": {
+          "TITLE": "Definitionen",
+          "DESCRIPTION": "Für die Zwecke dieser Datenschutzerklärung:",
+          "ACCOUNT": "Konto bedeutet ein einzigartiges Konto, das für Sie erstellt wurde, um auf unseren Dienst oder Teile unseres Dienstes zuzugreifen.",
+          "AFFILIATE": "Affiliate bezeichnet ein Unternehmen, das eine Partei kontrolliert, von dieser kontrolliert wird oder unter gemeinsamer Kontrolle mit einer Partei steht, wobei „Kontrolle“ den Besitz von 50 % oder mehr der Aktien, des Eigenkapitalanteils oder anderer Wertpapiere bedeutet, die zur Wahl von Direktoren oder anderen Verwaltungsbehörden berechtigt sind.",
+          "COMPANY": "Unternehmen (in dieser Vereinbarung entweder als \"das Unternehmen\", \"wir\", \"uns\" oder \"unser\" bezeichnet) bezieht sich auf Portfolio."
+        }
+      }
+    },
+    "HEADER": {
+        "ABOUT_ME": "Über mich",
+        "MY_SKILLS": "Meine Fähigkeiten",
+        "PROJECTS": "Projekte",
+        "SAY_HI": "Sag Hallo!"
+      }
+    
+  }
+  

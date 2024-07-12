@@ -5,9 +5,13 @@
         <img class="logo" src="./assets/img/logo.png" alt="Logo" /></div
     ></a>
 
+    <div class="translate">
+      <img src="./assets/img/eng.png" alt="">
+    </div>
     <div class="burger-menu" (click)="toggleMenu()">
       <img [src]="getCurrentFrame()" alt="Burger Menu" />
     </div>
+    
     <div class="overlay" [@toggleOverlay]="menuActive ? 'active' : 'inactive'">
       <nav>
         <div>

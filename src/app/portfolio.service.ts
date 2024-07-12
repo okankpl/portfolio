@@ -28,7 +28,7 @@ export class PortfolioService {
       title: 'Join',
       languages: 'JavaScript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      projecturl: 'https://okan-kaplan.developerakademie.net/join/index.html',
+      projecturl: 'https://join.okan-kaplan.de/',
       githuburl: 'https://github.com/maksmuehlbauer/Join_Gruppenarbeit'
     },
     { 
@@ -37,7 +37,7 @@ export class PortfolioService {
       title: 'Pollo Loco',
       languages: 'JavaScript | HTML | CSS',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      projecturl: 'https://join.okan-kaplan.de/',
+      projecturl: 'https://elpolloloco.okan-kaplan.de/',
       githuburl: 'https://github.com/okankpl/EL-POLLO-LOCO'
     },
     

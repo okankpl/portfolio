@@ -5,6 +5,7 @@ import { HeaderComponent } from './../shared/header/header.component';
 import { AboutMeComponent } from './../about-me/about-me.component';
 import { MyskillsComponent } from './../myskills/myskills.component';
 import { ProjectsComponent } from './../projects/projects.component';
+
 @Component({
   selector: 'app-maincontent',
   standalone: true,

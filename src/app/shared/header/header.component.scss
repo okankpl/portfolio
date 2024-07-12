@@ -33,6 +33,12 @@ header {
   }
 }
 
+.translate{
+  >img{
+    width: 40px;
+  }
+}
+
 .overlay {
   @include widthHeight($h: 100%, $w: 100%);
   position: absolute;
