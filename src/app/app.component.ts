@@ -8,18 +8,17 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { MyskillsComponent } from './myskills/myskills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { MaincontentComponent } from "./maincontent/maincontent.component";
-
-
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,
+  imports: [CommonModule, RouterOutlet, TranslateModule,
     StartscreenComponent, FooterComponent,
     HeaderComponent, AboutMeComponent,
     MyskillsComponent, ProjectsComponent, MaincontentComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
 

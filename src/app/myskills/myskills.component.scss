@@ -3,7 +3,7 @@
 
 section {
   @include widthHeight($h: auto, $w: 70%);
-  margin: auto auto;
+  margin:  100px auto;
   border: 5px solid black;
   position: relative;
   @include dFlex();
@@ -23,13 +23,13 @@ section::before {
 }
 
 h1 {
-  width: 50%;
+  width: 300px;
   position: absolute;
-  top: -35px;
+  top: -45px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  font-size: 80px;
+  font-size: 60px;
   font-family: "Overpass", sans-serif;
   font-weight: 700;
   background-color: $bgr_color !important;
@@ -113,6 +113,19 @@ h1:hover {
 
 @media (max-width: 1000px) {
   h1 {
-    font-size: 50px !important;
+    font-size: 40px !important;
+    top: -30px;
   }
+
+}
+
+
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px !important;
+    top: -30px;
+    width:160px;
+  }
+
 }

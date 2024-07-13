@@ -2,13 +2,14 @@ import { Component, Renderer2, Inject } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { DOCUMENT } from '@angular/common';
-
+import { DOCUMENT, CommonModule } from '@angular/common';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { CustomTranslateService } from '../../services/translate.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MatMenuModule, MatButtonModule],
+  imports: [CommonModule, MatMenuModule, MatButtonModule, TranslateModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   animations: [
@@ -31,15 +32,25 @@ export class HeaderComponent {
   currentFrame: number = 1;
   animationInterval: any;
   isAnimating: boolean = false;
+  currentLang: string;
 
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
+  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document, private customTranslateService: CustomTranslateService, private translate: TranslateService) {
+    this.currentLang = this.translate.currentLang || this.translate.getDefaultLang();
+    this.translate.onLangChange.subscribe((event) => {
+      this.currentLang = event.lang;
+    });
+  }
+
+  switchLanguage(lang: string) {
+    this.customTranslateService.switchLanguage(lang);
+  }
 
   toggleMenu() {
     if (this.isAnimating) return;
-  
+
     this.isAnimating = true;
     this.menuActive = !this.menuActive;
-  
+
     if (this.menuActive) {
       this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
       this.renderer.setStyle(this.document.body, 'height', '100%');

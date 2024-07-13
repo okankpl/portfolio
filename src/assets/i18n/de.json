@@ -1,30 +1,45 @@
 {
-    "PRIVACY_POLICY": {
-      "TITLE": "Datenschutzerklärung",
-      "LAST_UPDATED": "Zuletzt aktualisiert: 11. Juli 2024",
-      "DESCRIPTION": "Diese Datenschutzerklärung beschreibt unsere Richtlinien und Verfahren zur Erfassung, Nutzung und Offenlegung Ihrer Informationen, wenn Sie den Dienst nutzen, und informiert Sie über Ihre Datenschutzrechte und wie das Gesetz Sie schützt.",
-      "IMPROVE_SERVICE": "Wir verwenden Ihre personenbezogenen Daten, um den Dienst bereitzustellen und zu verbessern. Durch die Nutzung des Dienstes stimmen Sie der Erfassung und Nutzung von Informationen gemäß dieser Datenschutzerklärung zu. Diese Datenschutzerklärung wurde mit Hilfe des Free Privacy Policy Generator erstellt.",
-      "INTERPRETATION_DEFINITIONS": {
-        "TITLE": "Interpretation und Definitionen",
-        "INTERPRETATION": {
-          "TITLE": "Interpretation",
-          "DESCRIPTION": "Die Wörter, deren Anfangsbuchstaben groß geschrieben sind, haben die unten definierten Bedeutungen. Die folgenden Definitionen haben unabhängig davon, ob sie im Singular oder im Plural erscheinen, die gleiche Bedeutung."
-        },
-        "DEFINITIONS": {
-          "TITLE": "Definitionen",
-          "DESCRIPTION": "Für die Zwecke dieser Datenschutzerklärung:",
-          "ACCOUNT": "Konto bedeutet ein einzigartiges Konto, das für Sie erstellt wurde, um auf unseren Dienst oder Teile unseres Dienstes zuzugreifen.",
-          "AFFILIATE": "Affiliate bezeichnet ein Unternehmen, das eine Partei kontrolliert, von dieser kontrolliert wird oder unter gemeinsamer Kontrolle mit einer Partei steht, wobei „Kontrolle“ den Besitz von 50 % oder mehr der Aktien, des Eigenkapitalanteils oder anderer Wertpapiere bedeutet, die zur Wahl von Direktoren oder anderen Verwaltungsbehörden berechtigt sind.",
-          "COMPANY": "Unternehmen (in dieser Vereinbarung entweder als \"das Unternehmen\", \"wir\", \"uns\" oder \"unser\" bezeichnet) bezieht sich auf Portfolio."
-        }
-      }
+  "HEADER": {
+    "ABOUT": "Über mich",
+    "SKILLS": "Meine Fähigkeiten",
+    "PROJECTS": "Projekte",
+    "HI": "Sag Hallo"
+  },
+  "ABOUT": {
+    "ABOUT": "ÜBER MICH",
+    "INTRO": "Ich bin ein Front-End-Entwickler mit Sitz in Stuttgart, Deutschland. Ich unterstütze gerne Designer und Unternehmen dabei, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Entwicklerkarriere mit einer Position als Junior-Webentwickler fortzusetzen. Wenn Sie denken, dass ich gut zu Ihren Projekten passen würde, kontaktieren Sie mich!",
+    "CONTACT": "Lass uns reden"
+  },
+  "MY_SKILLS": {
+    "SKILLS": "Meine Fähigkeiten"
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "INTRO": "Entdecken Sie eine Auswahl meiner Arbeit hier - interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen" 
+  },
+  "PROJECTS": {
+    "JOIN": {
+      "TITLE": "Join",
+      "DESCRIPTION": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
     },
-    "HEADER": {
-        "ABOUT_ME": "Über mich",
-        "MY_SKILLS": "Meine Fähigkeiten",
-        "PROJECTS": "Projekte",
-        "SAY_HI": "Sag Hallo!"
-      }
-    
+    "POLLO_LOCO": {
+      "TITLE": "Pollo Loco",
+      "DESCRIPTION": "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+    },
+    "POKEDEX": {
+      "TITLE": "Pokédex",
+      "DESCRIPTION": "Basierend auf der PokéAPI, eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+    }
+  },
+ "CONTACT_FORM": {
+    "HEADLINE": "Möchten Sie ein neues Projekt besprechen?",
+    "SUBHEADLINE": "Sagen Sie Hallo! Lassen Sie uns Ihre Ideen besprechen und umsetzen.",
+    "NAME_PLACEHOLDER": "Ihr Name",
+    "EMAIL_PLACEHOLDER": "Ihre E-Mail",
+    "MESSAGE_PLACEHOLDER": "Ihre Nachricht",
+    "NAME_ERROR": "Bitte geben Sie einen Namen ein",
+    "EMAIL_ERROR": "Bitte geben Sie eine gültige E-Mail-Adresse ein (xyz@xyz.xyz)",
+    "MESSAGE_ERROR": "Bitte geben Sie eine Nachricht ein",
+    "PRIVACY_POLICY": "Ich habe die <a href='privacypolicy' class='privacy-link'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu"
   }
-  
+}

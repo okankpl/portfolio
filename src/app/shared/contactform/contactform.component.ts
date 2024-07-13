@@ -1,24 +1,25 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, TranslateModule, CommonModule],
   templateUrl: './contactform.component.html',
-  styleUrl: './contactform.component.scss'
+  styleUrls: ['./contactform.component.scss']
 })
-
-
 export class ContactformComponent {
 
-  http = inject(HttpClient); 
+  http = inject(HttpClient);
 
   contactData = {
     name: "",
     email: "",
-    message: ""
+    message: "",
+    privacyPolicy: false
   }
 
   post = {
@@ -33,12 +34,10 @@ export class ContactformComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid) {
-      
+    if (ngForm.submitted && ngForm.form.valid && this.contactData.privacyPolicy) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
           },
           error: (error) => {
@@ -46,9 +45,6 @@ export class ContactformComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid) {
-
-      ngForm.resetForm();
     }
   }
 }

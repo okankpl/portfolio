@@ -33,9 +33,10 @@ header {
   }
 }
 
-.translate{
-  >img{
+.translate {
+  > img {
     width: 40px;
+    cursor: pointer;
   }
 }
 
@@ -69,8 +70,8 @@ nav {
       position: relative;
       > a {
         color: black;
-        width: 28vw;
-        font-size: 6vw;
+        width: 50vw;
+        font-size: 40px;
         cursor: pointer;
         position: relative;
         display: inline-block;

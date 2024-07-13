@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class PortfolioService {
-
   constructor() { }
 
   skills = [
@@ -17,7 +15,7 @@ export class PortfolioService {
     { icon: 'firebase.png', name: 'GIT' },
     { icon: 'git.png', name: 'CSS' },
     { icon: 'material.png', name: 'Material' },
-    { icon: 'api.png', name: 'Rest-Api' },     
+    { icon: 'api.png', name: 'Rest-Api' },
     { icon: 'scrum.png', name: 'Scrum' }
   ];
 
@@ -25,31 +23,29 @@ export class PortfolioService {
     {
       id: 0,
       img: './assets/img/join.png',
-      title: 'Join',
+      title: 'PROJECTS.JOIN.TITLE',
+      description: 'PROJECTS.JOIN.DESCRIPTION',
       languages: 'JavaScript | HTML | CSS',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       projecturl: 'https://join.okan-kaplan.de/',
       githuburl: 'https://github.com/maksmuehlbauer/Join_Gruppenarbeit'
     },
-    { 
+    {
       id: 1,
       img: './assets/img/elpolloloco.png',
-      title: 'Pollo Loco',
+      title: 'PROJECTS.POLLO_LOCO.TITLE',
+      description: 'PROJECTS.POLLO_LOCO.DESCRIPTION',
       languages: 'JavaScript | HTML | CSS',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       projecturl: 'https://elpolloloco.okan-kaplan.de/',
       githuburl: 'https://github.com/okankpl/EL-POLLO-LOCO'
     },
-    
     {
-      id: 3,
+      id: 2,
       img: './assets/img/pokedex.png',
-      title: 'Pokédex',
-      languages: 'JavaScript | HTML | CSS | Api ',
-      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      title: 'PROJECTS.POKEDEX.TITLE',
+      description: 'PROJECTS.POKEDEX.DESCRIPTION',
+      languages: 'JavaScript | HTML | CSS | Api',
       projecturl: 'https://pokedex.okan-kaplan.de/',
       githuburl: 'https://github.com/okankpl/Pokedex'
     },
-   
-  ]
+  ];
 }

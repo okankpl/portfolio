@@ -1,36 +1,40 @@
 <section>
   <header>
-    <a href="#"
-      ><div>
-        <img class="logo" src="./assets/img/logo.png" alt="Logo" /></div
-    ></a>
+    <a href="#">
+      <div>
+        <img class="logo" src="./assets/img/logo.png" alt="Logo" />
+      </div>
+    </a>
 
-    <div class="translate">
-      <img src="./assets/img/eng.png" alt="">
+    <div class="translate" *ngIf="currentLang !== 'en'" (click)="switchLanguage('en')">
+      <img src="./assets/img/eng.png" alt="English" />
+    </div>
+    <div class="translate" *ngIf="currentLang !== 'de'" (click)="switchLanguage('de')">
+      <img src="./assets/img/de.png" alt="Deutsch" />
     </div>
     <div class="burger-menu" (click)="toggleMenu()">
       <img [src]="getCurrentFrame()" alt="Burger Menu" />
     </div>
     
-    <div class="overlay" [@toggleOverlay]="menuActive ? 'active' : 'inactive'">
+    <div class="overlay" [@toggleOverlay]="menuActive ? 'active' : 'inactive'" *ngIf="menuActive">
       <nav>
         <div>
           <span>
-            <a (click)="closeMenu()" href="#aboutMe">About Me</a>
+            <a (click)="closeMenu()" href="#aboutMe">{{ 'HEADER.ABOUT' | translate }}</a>
           </span>
           <span>
-            <a (click)="closeMenu()" href="#mySkills">My Skills</a>
+            <a (click)="closeMenu()" href="#mySkills">{{ 'HEADER.SKILLS' | translate }}</a>
           </span>
           <span>
-            <a (click)="closeMenu()" href="#projects">Projects</a>
+            <a (click)="closeMenu()" href="#projects">{{ 'HEADER.PROJECTS' | translate }}</a>
           </span>
         </div>
 
         <div class="say-hi">
           <div>
             <div>
-              <h2>Say Hi!</h2>
-              <h4>okan149&#64;gmail.com</h4>
+              <h2>{{ 'HEADER.HI' | translate }}</h2>
+              <h4>okan149&#64;gmail.com</h4> 
             </div>
             <div class="links">
               <a href="https://github.com/okankpl/" target="_blank">
@@ -39,10 +43,7 @@
               <a href="mailto:okan149@gmail.com" target="_blank">
                 <img src="./assets/img/email.png" alt="E-Mail" />
               </a>
-              <a
-                href="https://www.linkedin.com/in/okan-kaplan-11b50a27b/"
-                target="_blank"
-              >
+              <a href="https://www.linkedin.com/in/okan-kaplan-11b50a27b/" target="_blank">
                 <img src="./assets/img/linkedin.png" alt="LinkedIn" />
               </a>
             </div>

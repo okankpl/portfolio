@@ -1,4 +1,4 @@
-body{
+body {
   margin: auto 0;
   width: 100%;
   max-width: 100vw;
@@ -6,7 +6,11 @@ body{
   justify-content: center;
   box-sizing: border-box;
 
-
+  .checkbox-container .privacy-link {
+    align-items: center;
+    color: orange !important;
+    text-decoration: none !important;
+  }
 }
 html {
   scroll-behavior: smooth;
@@ -14,18 +18,17 @@ html {
 
 .container {
   margin: 0 auto;
-//   background-color: #fffcf3 !important;
 }
 
 ::-webkit-scrollbar {
   width: 12px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #FF9900;
+  background-color: #ff9900;
   border-radius: 6px;
 }
 ::-webkit-scrollbar-track {
-  background:#fffcf3;
+  background: #fffcf3;
 }
 
 /* You can add global styles to this file, and also import other style files */

@@ -13,10 +13,9 @@ input[type=text], input[type=email], select, textarea {
   opacity: 1;
 }
 
-/* Spezifisches Styling für die Platzhaltertexte */
 input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeholder {
   color: white;
-  opacity: 1; /* Stellen Sie sicher, dass die Platzhalter nicht transparent sind */
+  opacity: 1; 
 }
 
 input[type=submit] {
@@ -56,10 +55,57 @@ form {
   text-align: center;
 }
 
-h2{
+h2 {
   color: orange;
 }
+
 a {
-  text-decoration: none;
-  color: orange;
+  text-decoration: none !important;
+  color: orange !important;
 }
+
+p {
+  text-decoration: none;
+}
+
+.checkbox-container {
+
+  margin-bottom: 16px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 8px;
+  position: relative;
+  top: +5px;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '✔';
+  font-size: 16px;
+  color: orange;
+  position: absolute;
+  top: -3px;
+  left: 2px;
+}
+
+.submit-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
