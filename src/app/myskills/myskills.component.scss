@@ -46,9 +46,8 @@ h1 {
   @include dFlex();
   flex-wrap: wrap;
   gap: 20px;
-  width: 70%;
   margin: 60px auto 0;
-  padding: 20px;
+  padding: 40px;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
