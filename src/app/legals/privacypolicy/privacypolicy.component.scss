@@ -4,3 +4,12 @@ section {
     margin: 10vh auto;
     font-family: 'Overpass',sans-serif;
 }
+
+.privacy-link {
+    color: orange !important;
+    text-decoration: none !important;
+  }
+  
+  .privacy-link:hover {
+    text-decoration: underline !important;
+  }

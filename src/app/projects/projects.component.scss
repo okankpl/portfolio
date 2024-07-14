@@ -12,7 +12,7 @@ h1:hover {
   color: $orange;
 }
 
-p{
+p {
   font-size: 22px;
 }
 
@@ -60,10 +60,10 @@ section {
   @include widthHeight(100%, 100%);
   aspect-ratio: 4/3 !important;
   filter: grayscale(65%);
-  transition: filter 0.5s ease;
+  transition: filter 1.4s ease;
 }
 
-.portfolio-img img:hover {
+.portfolio-img.visible img {
   filter: grayscale(0%);
 }
 
@@ -76,9 +76,14 @@ section {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition: opacity 1s ease-in-out, transform 0.4s ease-in-out;
   transform: translate(0, 0);
   pointer-events: none;
+}
+
+.hover-box.visible {
+  opacity: 1;
+  transform: translate(20px, -20px);
 }
 
 .hover-border {
@@ -94,31 +99,26 @@ section {
   @include widthHeight(60px, 60px);
   z-index: 2;
   position: absolute;
-  right: -30px; /* Adjust as needed */
+  right: -30px; 
   top: 50%;
   transform: translateY(-50%) rotate(120deg);
-  transition: transform 0.4s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .portfolio-container.reverse .arrow-box {
-  left: -30px; /* Adjust as needed for reverse */
+  left: -30px; 
   right: auto;
 }
 
-.portfolio-img:hover .hover-box {
-  opacity: 1;
-  transform: translate(20px, -20px);
-}
-
-.portfolio-img:hover .arrow-box {
+.portfolio-img.visible .arrow-box {
   transform: translateY(-50%) rotate(360deg);
 }
 
-.portfolio-container.reverse .portfolio-img:hover .hover-box {
+.portfolio-container.reverse .portfolio-img.visible .hover-box {
   transform: translate(-20px, -20px);
 }
 
-.portfolio-container.reverse .portfolio-img:hover .arrow-box {
+.portfolio-container.reverse .portfolio-img.visible .arrow-box {
   transform: translateY(-50%) rotate(270deg);
 }
 
@@ -140,10 +140,10 @@ section {
   flex-direction: column;
   padding: 10px;
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
-.portfolio-container:hover .desc {
+.desc.visible {
   opacity: 1;
 }
 
@@ -161,10 +161,10 @@ h3 {
   color: $orange;
 }
 
-@media (max-width:1100px) {
- h3{
-  font-size: 24px;
- } 
+@media (max-width: 1100px) {
+  h3 {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 950px) {
@@ -179,11 +179,12 @@ h3 {
     font-size: 20px;
   }
 
-  .desc{
+  .desc {
     opacity: 1;
   }
 }
-@media (max-width: 450px) {
+
+@media (max-width: 500px) {
   .hover-box,
   .arrow-box {
     display: none;
@@ -193,7 +194,7 @@ h3 {
   }
 }
 
-.skewY{
+.skewY {
   height: 20vh;
   background: black;
   transform-origin: top left;

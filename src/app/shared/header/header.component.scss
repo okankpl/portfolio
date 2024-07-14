@@ -2,6 +2,18 @@
 @import "./../../../assets/styles/mixins.scss";
 
 section {
+  scroll-margin-top: 10vh; /* Höhe des Headers */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  scroll-margin-top: 10vh;
+}
+
+body {
+  margin: 0;
+}
+
+section {
   position: fixed;
   top: 0;
   left: 0;
@@ -41,12 +53,14 @@ header {
 }
 
 .overlay {
-  @include widthHeight($h: 100%, $w: 100%);
-  position: absolute;
+  position: fixed;
   top: 8vh;
   left: 0;
   right: 0;
+  width: 100vw;
+  height: 100%;
   background-color: $bgr_color;
+  box-sizing: border-box;
 }
 
 .no-scroll {
@@ -70,7 +84,7 @@ nav {
       position: relative;
       > a {
         color: black;
-        width: 50vw;
+        width: 300px;
         font-size: 40px;
         cursor: pointer;
         position: relative;
@@ -137,6 +151,11 @@ nav {
     max-width: 1920px;
     @include widthHeight($h: 100%, $w: 90%);
   }
+}
+
+.burger-lang {
+  display: flex;
+  gap: 40px;
 }
 
 h4,

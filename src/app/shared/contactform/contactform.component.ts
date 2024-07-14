@@ -3,24 +3,25 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { NotificationComponent } from '../../notification/notification.component';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, TranslateModule, CommonModule],
+  imports: [FormsModule, TranslateModule, CommonModule, NotificationComponent],
   templateUrl: './contactform.component.html',
   styleUrls: ['./contactform.component.scss']
 })
 export class ContactformComponent {
-
   http = inject(HttpClient);
-
   contactData = {
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
     privacyPolicy: false
-  }
+  };
+  showNotification: boolean = false;
+  notificationMessage: string = '';
 
   post = {
     endPoint: 'https://okan-kaplan.de/sendMail.php',
@@ -28,23 +29,26 @@ export class ContactformComponent {
     options: {
       headers: {
         'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
+        responseType: 'text'
+      }
+    }
   };
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && this.contactData.privacyPolicy) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
+      this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
+        next: response => {
+          this.showNotification = true;
+          this.notificationMessage = 'CONTACT_FORM.EMAIL_SENT';
+          setTimeout(() => {
+            this.showNotification = false;
+          }, 3000);
+          ngForm.resetForm();
+        },
+        error: error => {
+          console.error(error);
+        },
+      });
     }
   }
 }

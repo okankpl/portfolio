@@ -3,9 +3,10 @@
 @import "./../../assets/styles/button.styles.scss";
 
 section {
-  margin: auto auto 50px;
+  margin: auto;
   width: 90%;
   max-width: 1920px;
+  padding-top: 10vh;
 }
 
 .about-me-container {

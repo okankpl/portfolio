@@ -72,7 +72,7 @@ export class HeaderComponent {
         clearInterval(this.animationInterval);
         callback();
       }
-    }, 100); 
+    }, 100);
   }
 
   getCurrentFrame() {

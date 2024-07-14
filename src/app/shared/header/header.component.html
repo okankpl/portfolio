@@ -5,8 +5,8 @@
         <img class="logo" src="./assets/img/logo.png" alt="Logo" />
       </div>
     </a>
-
-    <div class="translate" *ngIf="currentLang !== 'en'" (click)="switchLanguage('en')">
+    <div class="burger-lang">
+       <div class="translate" *ngIf="currentLang !== 'en'" (click)="switchLanguage('en')">
       <img src="./assets/img/eng.png" alt="English" />
     </div>
     <div class="translate" *ngIf="currentLang !== 'de'" (click)="switchLanguage('de')">
@@ -15,6 +15,8 @@
     <div class="burger-menu" (click)="toggleMenu()">
       <img [src]="getCurrentFrame()" alt="Burger Menu" />
     </div>
+    </div>
+   
     
     <div class="overlay" [@toggleOverlay]="menuActive ? 'active' : 'inactive'" *ngIf="menuActive">
       <nav>
