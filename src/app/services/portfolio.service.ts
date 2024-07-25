@@ -38,14 +38,6 @@ export class PortfolioService {
       projecturl: 'https://elpolloloco.okan-kaplan.de/',
       githuburl: 'https://github.com/okankpl/EL-POLLO-LOCO'
     },
-    {
-      id: 2,
-      img: './assets/img/pokedex.png',
-      title: 'PROJECTS.POKEDEX.TITLE',
-      description: 'PROJECTS.POKEDEX.DESCRIPTION',
-      languages: 'JavaScript | HTML | CSS | Api',
-      projecturl: 'https://pokedex.okan-kaplan.de/',
-      githuburl: 'https://github.com/okankpl/Pokedex'
-    },
+  
   ];
 }
