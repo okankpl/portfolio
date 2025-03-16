@@ -1,0 +1,134 @@
+@import "./../../assets/styles/variables";
+@import "./../../assets/styles/mixins";
+
+section {
+  background-color: $bgr_color !important;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 90vh; 
+  box-sizing: border-box;
+  padding-top: 8vh;
+  width: 90%;
+  > div {
+    @include dFlex($g:5px);
+    flex-direction: row;
+    > .line {
+      @include widthHeight($h: 3px, $w:50%);
+      background-color: black;
+      margin-top: 0px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.headline {
+  box-sizing: border-box;
+  > h1 {
+    max-width: 1920px !important;
+    font-size: 80px;
+    font-weight: 800;
+    font-family: "Syne";
+    text-align: center;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+}
+
+h3 {
+  font-size: 44px;
+  font-weight: 700;
+  font-family: "Syne";
+  color: $orange;
+  margin: 0;
+}
+
+.under-section {
+  flex-direction: column;
+  flex-grow: 1;
+  @include dFlex($jc:space-between !important); 
+  max-width: 1920px;
+  margin: auto;
+  width: 100%;
+}
+
+.name-line {
+  max-width: 1920px;
+  margin: auto;
+  width: 100%;
+}
+
+.font-size-32{
+  font-weight: 400;
+  font-size: 28px !important;
+  letter-spacing: 0;
+}
+
+.email {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.scroll-down {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; 
+  height: 140px;
+  text-align: center;
+}
+
+.scroll-down > img {
+  width: 70px;
+  animation: scrollAnimation 2s linear infinite;
+}
+
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(140px);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:750px) {
+  h1{
+    font-size: 54px !important;
+  }
+  h3{
+    font-size: 32px;
+  }
+}
+
+@media(max-width:450px) {
+  h1{
+    font-size: 40px !important;
+  }
+}
+
+@media(max-width:550px) {
+  h3{
+    font-size: 26px;
+  }
+  
+}

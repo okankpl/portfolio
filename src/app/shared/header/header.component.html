@@ -1,0 +1,57 @@
+<section>
+  <header>
+    <a href="#">
+      <div>
+        <img class="logo" src="./assets/img/logo.png" alt="Logo" />
+      </div>
+    </a>
+    <div class="burger-lang">
+       <div class="translate" *ngIf="currentLang !== 'en'" (click)="switchLanguage('en')">
+      <img src="./assets/img/eng.png" alt="English" />
+    </div>
+    <div class="translate" *ngIf="currentLang !== 'de'" (click)="switchLanguage('de')">
+      <img src="./assets/img/de.png" alt="Deutsch" />
+    </div>
+    <div class="burger-menu" (click)="toggleMenu()">
+      <img [src]="getCurrentFrame()" alt="Burger Menu" />
+    </div>
+    </div>
+   
+    
+    <div class="overlay" [@toggleOverlay]="menuActive ? 'active' : 'inactive'" *ngIf="menuActive">
+      <nav>
+        <div>
+          <span>
+            <a (click)="closeMenu()" href="#aboutMe">{{ 'HEADER.ABOUT' | translate }}</a>
+          </span>
+          <span>
+            <a (click)="closeMenu()" href="#mySkills">{{ 'HEADER.SKILLS' | translate }}</a>
+          </span>
+          <span>
+            <a (click)="closeMenu()" href="#projects">{{ 'HEADER.PROJECTS' | translate }}</a>
+          </span>
+        </div>
+
+        <div class="say-hi">
+          <div>
+            <div>
+              <h2>{{ 'HEADER.HI' | translate }}</h2>
+              <h4>okan149&#64;gmail.com</h4> 
+            </div>
+            <div class="links">
+              <a href="https://github.com/okankpl/" target="_blank">
+                <img src="./assets/img/github.png" alt="GitHub" />
+              </a>
+              <a href="contact@okan-kaplan.de" target="_blank">
+                <img src="./assets/img/email.png" alt="E-Mail" />
+              </a>
+              <a href="https://www.linkedin.com/in/okan-kaplan/" target="_blank">
+                <img src="./assets/img/linkedin.png" alt="LinkedIn" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+</section>

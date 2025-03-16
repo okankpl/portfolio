@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="headline-text-container">
+    <h2>{{ 'CONTACT_FORM.HEADLINE' | translate }}</h2>
+    <h4>{{ 'CONTACT_FORM.SUBHEADLINE' | translate }}</h4>
+  </div>
+
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <input
+      [(ngModel)]="contactData.name"
+      type="text"
+      id="name"
+      name="name"
+      placeholder="{{ 'CONTACT_FORM.NAME_PLACEHOLDER' | translate }}"
+      required
+      #name="ngModel"
+    />
+    <span *ngIf="!name.valid && name.touched" style="color: orange">{{ 'CONTACT_FORM.NAME_ERROR' | translate }}</span>
+
+    <input
+      #email="ngModel"
+      [(ngModel)]="contactData.email"
+      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+      type="email"
+      id="email"
+      name="email"
+      placeholder="{{ 'CONTACT_FORM.EMAIL_PLACEHOLDER' | translate }}"
+      required
+    />
+    <span *ngIf="!email.valid && email.touched" style="color: orange">{{ 'CONTACT_FORM.EMAIL_ERROR' | translate }}</span>
+
+    <textarea
+      [(ngModel)]="contactData.message"
+      #message="ngModel"
+      id="message"
+      name="message"
+      placeholder="{{ 'CONTACT_FORM.MESSAGE_PLACEHOLDER' | translate }}"
+      style="height: 200px"
+      required
+    ></textarea>
+    <span *ngIf="!message.valid && message.touched" style="color: orange">{{ 'CONTACT_FORM.MESSAGE_ERROR' | translate }}</span>
+
+    <div class="checkbox-container">
+      <input type="checkbox" id="privacyPolicy" name="privacyPolicy" [(ngModel)]="contactData.privacyPolicy" required />
+      <label for="privacyPolicy" [innerHTML]="'CONTACT_FORM.PRIVACY_POLICY' | translate"></label>
+    </div>
+    
+    <input type="submit" [disabled]="!contactForm.form.valid" class="submit-button" value="{{ 'CONTACT_FORM.SUBMIT' | translate }}" />
+  </form>
+
+  <app-notification *ngIf="showNotification" [message]="notificationMessage"></app-notification>
+</div>

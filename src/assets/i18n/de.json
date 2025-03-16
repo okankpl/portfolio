@@ -1,0 +1,80 @@
+{
+  "HEADER": {
+    "ABOUT": "Über mich",
+    "SKILLS": "Meine Fähigkeiten",
+    "PROJECTS": "Projekte",
+    "HI": "Sag Hallo"
+  },
+  "ABOUT": {
+    "ABOUT": "ÜBER MICH",
+    "INTRO": "Ich bin ein Front-End-Entwickler mit Sitz in Stuttgart, Deutschland. Ich unterstütze gerne Designer und Unternehmen dabei, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Entwicklerkarriere mit einer Position als Junior-Webentwickler fortzusetzen. Wenn Sie denken, dass ich gut zu Ihren Projekten passen würde, kontaktieren Sie mich!",
+    "CONTACT": "Lass uns reden"
+  },
+  "MY_SKILLS": {
+    "SKILLS": "Meine Fähigkeiten"
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "INTRO": "Entdecken Sie eine Auswahl meiner Arbeit hier - interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen"
+  },
+  "PROJECTS": {
+    "JOIN": {
+      "TITLE": "Join",
+      "DESCRIPTION": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+    },
+    "POLLO_LOCO": {
+      "TITLE": "Pollo Loco",
+      "DESCRIPTION": "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+    },
+    "POKEDEX": {
+      "TITLE": "Pokédex",
+      "DESCRIPTION": "Basierend auf der PokéAPI, eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+    }
+  },
+  "CONTACT_FORM": {
+    "HEADLINE": "Möchten Sie ein neues Projekt besprechen?",
+    "SUBHEADLINE": "Sagen Sie Hallo! Lassen Sie uns Ihre Ideen besprechen und umsetzen.",
+    "NAME_PLACEHOLDER": "Ihr Name",
+    "EMAIL_PLACEHOLDER": "Ihre E-Mail",
+    "MESSAGE_PLACEHOLDER": "Ihre Nachricht",
+    "NAME_ERROR": "Bitte geben Sie einen Namen ein",
+    "EMAIL_ERROR": "Bitte geben Sie eine gültige E-Mail-Adresse ein (xyz@xyz.xyz)",
+    "MESSAGE_ERROR": "Bitte geben Sie eine Nachricht ein",
+    "PRIVACY_POLICY": "Ich habe die <a href='privacypolicy' class='privacy-link'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu",
+    "EMAIL_SENT": "E-Mail erfolgreich gesendet!"
+  },
+  "FOOTER": {
+    "SAY_HI": "Sag Hallo!",
+    "COPYRIGHT": "Okan Kaplan 2024",
+    "LEGAL_NOTICE": "Impressum"
+  },
+  "IMPRINT": {
+    "IMPRINT": "Impressum",
+    "CONTACT": "Kontakt"
+  },
+  "PRIVACY_POLICY": {
+    "TITLE": "Datenschutzerklärung",
+    "LAST_UPDATED": "Zuletzt aktualisiert: 11. Juli 2024",
+    "INTRO": "Diese Datenschutzerklärung beschreibt unsere Richtlinien und Verfahren zur Sammlung, Nutzung und Offenlegung Ihrer Informationen, wenn Sie den Service nutzen, und informiert Sie über Ihre Datenschutzrechte und wie das Gesetz Sie schützt.",
+    "USE_OF_DATA": "Wir verwenden Ihre personenbezogenen Daten, um den Service bereitzustellen und zu verbessern. Durch die Nutzung des Services stimmen Sie der Sammlung und Nutzung von Informationen gemäß dieser Datenschutzerklärung zu. Diese Datenschutzerklärung wurde mit Hilfe des kostenlosen Datenschutzerklärungs-Generators erstellt.",
+    "INTERPRETATION_DEFINITIONS": "Auslegung und Definitionen",
+    "INTERPRETATION": "Auslegung",
+    "DEFINITIONS_INTRO": "Die Wörter, deren Anfangsbuchstaben groß geschrieben sind, haben die Bedeutungen, die unter den folgenden Bedingungen definiert sind. Die folgenden Definitionen haben die gleiche Bedeutung, unabhängig davon, ob sie im Singular oder im Plural erscheinen.",
+    "DEFINITIONS": "Definitionen",
+    "DEFINITIONS_LIST": {
+      "ACCOUNT": "Konto bedeutet ein einzigartiges Konto, das für Sie erstellt wurde, um auf unseren Service oder Teile unseres Services zuzugreifen.",
+      "AFFILIATE": "Affiliate bedeutet eine Einheit, die eine Partei kontrolliert, von einer Partei kontrolliert wird oder unter gemeinsamer Kontrolle mit einer Partei steht, wobei 'Kontrolle' den Besitz von 50% oder mehr der Anteile, des Eigenkapitals oder anderer Wertpapiere bedeutet, die zur Wahl von Direktoren oder anderen Verwaltungsbehörden berechtigt sind.",
+      "COMPANY": "Unternehmen (bezieht sich entweder auf 'das Unternehmen', 'Wir', 'Uns' oder 'Unser' in dieser Vereinbarung) bezieht sich auf Portfolio.",
+      "COOKIES": "Cookies sind kleine Dateien, die von einer Website auf Ihrem Computer, Mobilgerät oder einem anderen Gerät platziert werden und unter anderem Details zu Ihrem Browserverlauf auf dieser Website enthalten.",
+      "COUNTRY": "Land bezieht sich auf: Baden-Württemberg, Deutschland",
+      "DEVICE": "Gerät bedeutet jedes Gerät, das auf den Service zugreifen kann, wie ein Computer, ein Mobiltelefon oder ein digitales Tablet.",
+      "PERSONAL_DATA": "Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare Person beziehen.",
+      "SERVICE": "Service bezieht sich auf die Website.",
+      "SERVICE_PROVIDER": "Dienstanbieter bedeutet jede natürliche oder juristische Person, die die Daten im Auftrag des Unternehmens verarbeitet. Es bezieht sich auf Drittunternehmen oder Einzelpersonen, die vom Unternehmen beschäftigt werden, um den Service zu erleichtern, den Service im Namen des Unternehmens bereitzustellen, Dienstleistungen im Zusammenhang mit dem Service zu erbringen oder dem Unternehmen bei der Analyse der Nutzung des Services zu helfen.",
+      "THIRD_PARTY_SOCIAL_MEDIA_SERVICE": "Drittanbieter von Social-Media-Diensten bezieht sich auf jede Website oder jedes soziale Netzwerk, über das ein Benutzer sich anmelden oder ein Konto erstellen kann, um den Service zu nutzen.",
+      "USAGE_DATA": "Nutzungsdaten beziehen sich auf automatisch gesammelte Daten, die entweder durch die Nutzung des Services oder von der Service-Infrastruktur selbst generiert werden (zum Beispiel die Dauer eines Seitenbesuchs).",
+      "WEBSITE": "Website bezieht sich auf Portfolio, zugänglich unter https://okan-kaplan.de/",
+      "YOU": "Sie bezeichnet die Person, die auf den Service zugreift oder ihn nutzt, oder das Unternehmen oder andere juristische Person, in deren Namen diese Person auf den Service zugreift oder ihn nutzt, je nach Fall."
+    }
+  }
+}

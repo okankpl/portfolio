@@ -1,0 +1,194 @@
+@import "./../../../assets/styles/variables.scss";
+@import "./../../../assets/styles/mixins.scss";
+
+section {
+  scroll-margin-top: 10vh; /* Höhe des Headers */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  scroll-margin-top: 10vh;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: $bgr_color;
+  box-sizing: border-box;
+  height: 10vh;
+  z-index: 9000;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: $bgr_color !important;
+  max-width: 1920px;
+  margin: auto;
+  @include widthHeight($h: 10vh, $w: 90%);
+  @include dFlex($jc: space-between);
+  > a {
+    > div {
+      > .logo {
+        height: 80px;
+      }
+    }
+  }
+}
+
+.translate {
+  > img {
+    width: 40px;
+    cursor: pointer;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 8vh;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: $bgr_color;
+  box-sizing: border-box;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+  height: 100%;
+}
+
+nav {
+  font-family: "Syne", sans-serif;
+  @include widthHeight($h: 92vh, $w: 100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 26px;
+  > div {
+    @include dFlex($g: 30px);
+    flex-direction: column;
+    min-height: 50%;
+    > span {
+      text-align: center;
+      position: relative;
+      > a {
+        color: black;
+        width: 300px;
+        font-size: 40px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        padding: 0 0 5px 5px;
+        text-decoration: none;
+      }
+
+      > a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        @include widthHeight($h: 3px, $w: 20%);
+        background: black;
+        transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+      }
+
+      > a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        @include widthHeight($h: 50%, $w: 3px);
+        background: black;
+        transition: height 0.3s ease-in-out;
+      }
+
+      > a:hover::before {
+        width: 50%;
+        left: 50%;
+      }
+
+      > a:hover::after {
+        height: 0;
+      }
+    }
+  }
+}
+
+.burger-menu {
+  > img {
+    width: 48px;
+    cursor: pointer;
+  }
+  > img:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 300ms;
+  }
+}
+
+.say-hi {
+  color: white;
+  background: black;
+  transform: skewY(+5deg);
+  transform-origin: top left;
+  @include widthHeight($h: 100%, $w: 100vw);
+
+  > div {
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    @include dFlex($jc: space-between);
+    margin: auto;
+    max-width: 1920px;
+    @include widthHeight($h: 100%, $w: 90%);
+  }
+}
+
+.burger-lang {
+  display: flex;
+  gap: 40px; 
+}
+
+h4,
+h2 {
+  cursor: pointer;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h4:hover,
+h2:hover {
+  cursor: pointer;
+  color: $orange;
+  transform: scale(1.05);
+  transition: ease-in-out 300ms;
+}
+h2 {
+  font-size: 52px;
+}
+
+.links {
+  > a {
+    > img {
+      height: 48px;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}
+
+.links {
+  > a {
+    > img:hover {
+      transform: translateY(-10px);
+    }
+  }
+}

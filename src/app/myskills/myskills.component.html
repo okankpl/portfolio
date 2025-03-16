@@ -1,0 +1,15 @@
+<div class="container">
+  <section>
+    <div class="skills-container">
+      <h1>{{ "MY_SKILLS.SKILLS" | translate }}</h1>
+      <div class="my-skills">
+        @for (skill of skills; track $index) {
+        <div>
+          <img src="./assets/img/{{ skill.icon }}" alt="" />
+          <span>{{ skill.name }}</span>
+        </div>
+        }
+      </div>
+    </div>
+  </section>
+</div>

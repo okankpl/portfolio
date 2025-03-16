@@ -1,0 +1,82 @@
+{
+  "HEADER": {
+    "ABOUT": "About Me",
+    "SKILLS": "My Skills",
+    "PROJECTS": "Projects",
+    "HI": "Say Hi"
+  },
+  "ABOUT": {
+    "ABOUT": "ABOUT ME",
+    "INTRO": "I am a Front-end developer based in Stuttgart, Germany. I enjoy helping designers and companies bring their ideas into real life. I am looking forward to continuing my developer career with a job in a junior web developer position. If you think I'd be a good match for your projects, contact me!",
+    "CONTACT": "Let's talk"
+  },
+  "MY_SKILLS": {
+    "SKILLS": "My Skills"
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "INTRO": "Explore a selection of my work here - interact with projects to see my skills in action"
+  },
+  "PROJECTS": {
+    "JOIN": {
+      "TITLE": "Join",
+      "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "POLLO_LOCO": {
+      "TITLE": "Pollo Loco",
+      "DESCRIPTION": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+    },
+    "POKEDEX": {
+      "TITLE": "Pokédex",
+      "DESCRIPTION": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+    }
+  },
+  "CONTACT_FORM": {
+    "HEADLINE": "Want to discuss a new project?",
+    "SUBHEADLINE": "Say Hello! let's discuss your ideas and make it happen",
+    "NAME_PLACEHOLDER": "Your name",
+    "EMAIL_PLACEHOLDER": "Your email",
+    "MESSAGE_PLACEHOLDER": "Your Message",
+    "NAME_ERROR": "Please enter a name",
+    "EMAIL_ERROR": "Please enter a valid email (xyz@xyz.xyz)",
+    "MESSAGE_ERROR": "Please enter a message",
+    "PRIVACY_POLICY": "I've read the <a href='privacypolicy' class='privacy-link'>privacy policy</a> and agree to the processing of my data as outlined",
+    "SUBMIT": "Send message",
+    "EMAIL_SENT": "Email sent successfully!"
+    
+  },
+  "FOOTER": {
+    "SAY_HI": "Say Hi!",
+    "COPYRIGHT": "Okan Kaplan 2024",
+    "LEGAL_NOTICE": "Legal notice"
+  },
+  "IMPRINT": {
+    "IMPRINT": "Imprint",
+    "CONTACT": "Contact"
+  },
+
+  "PRIVACY_POLICY": {
+    "TITLE": "Privacy Policy",
+    "LAST_UPDATED": "Last updated: July 11, 2024",
+    "INTRO": "This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.",
+    "USE_OF_DATA": "We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Free Privacy Policy Generator.",
+    "INTERPRETATION_DEFINITIONS": "Interpretation and Definitions",
+    "INTERPRETATION": "Interpretation",
+    "DEFINITIONS_INTRO": "The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.",
+    "DEFINITIONS": "Definitions",
+    "DEFINITIONS_LIST": {
+      "ACCOUNT": "Account means a unique account created for You to access our Service or parts of our Service.",
+      "AFFILIATE": "Affiliate means an entity that controls, is controlled by or is under common control with a party, where 'control' means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.",
+      "COMPANY": "Company (referred to as either 'the Company', 'We', 'Us' or 'Our' in this Agreement) refers to Portfolio.",
+      "COOKIES": "Cookies are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.",
+      "COUNTRY": "Country refers to: Baden-Württemberg, Germany",
+      "DEVICE": "Device means any device that can access the Service such as a computer, a cellphone or a digital tablet.",
+      "PERSONAL_DATA": "Personal Data is any information that relates to an identified or identifiable individual.",
+      "SERVICE": "Service refers to the Website.",
+      "SERVICE_PROVIDER": "Service Provider means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.",
+      "THIRD_PARTY_SOCIAL_MEDIA_SERVICE": "Third-party Social Media Service refers to any website or any social network website through which a User can log in or create an account to use the Service.",
+      "USAGE_DATA": "Usage Data refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).",
+      "WEBSITE": "Website refers to Portfolio, accessible from https://okan-kaplan.de/",
+      "YOU": "You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable."
+    }}
+}

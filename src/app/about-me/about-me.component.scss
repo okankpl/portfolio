@@ -1,0 +1,132 @@
+@import "./../../assets/styles/variables";
+@import "./../../assets/styles/mixins";
+@import "./../../assets/styles/button.styles.scss";
+
+section {
+  margin: auto;
+  width: 90%;
+  max-width: 1920px;
+  padding-top: 10vh;
+}
+
+.about-me-container {
+  display: flex;
+  width: 100%;
+  gap: 28px;
+}
+
+.about-me {
+  flex: 1;
+  @include dFlex($ai: flex-start, $g: 20px);
+  flex-direction: column;
+  > div {
+    @include dFlex();
+  }
+  > span {
+    font-family: "Overpass", sans-serif;
+    font-size: 20px;
+  }
+}
+
+.about-me-img {
+  flex-shrink: 0;
+  @include widthHeight($h: 500px, $w: 500px);
+  position: relative;
+  overflow: visible;
+  z-index: 10;
+}
+
+.about-me-img img {
+  border-radius: 10px;
+  @include widthHeight($h: 100%, $w: 100%);
+  object-fit: cover;
+}
+
+.about-me-img::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-image: url("./../../assets/img/rectangle.png");
+  background-size: cover;
+  @include widthHeight($h: 500px, $w: 500px);
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.about-me-img:hover::after {
+  opacity: 0.8;
+}
+
+h1 {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 64px;
+  margin-block-start: 0em;
+}
+
+h1:hover {
+  color: $orange;
+}
+
+@media (max-width: 1200px) {
+  .about-me-img::after {
+    @include widthHeight($h: 400px, $w: 400px);
+    top: -10px;
+    right: -10px;
+  }
+
+  .about-me-img img,
+  .about-me-img {
+    @include widthHeight($h: 400px, $w: 400px);
+  }
+}
+
+@media (max-width: 750px) {
+  .about-me-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .about-me-img {
+    margin: auto;
+  }
+
+  .about-me {
+    gap: 72px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .about-me-img img,
+  .about-me-img {
+    @include widthHeight($h: 350px, $w: 350px);
+  }
+  h1 {
+    font-size: 48px;
+  }
+  .about-me-img::after {
+    @include widthHeight($h: 350px, $w: 350px);
+    top: -10px;
+    right: -10px;
+  }
+}
+
+@media(max-width: 450px) {
+  .about-me-img img,
+  .about-me-img {
+    @include widthHeight($h: 300px, $w: 300px);
+  }
+  .about-me-img::after {
+    @include widthHeight($h: 300px, $w: 300px);
+    top: -10px;
+    right: -10px;
+  }
+}

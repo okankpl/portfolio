@@ -1,0 +1,39 @@
+<section>
+  <app-nav-arrow-mirrored></app-nav-arrow-mirrored>
+  <div>
+    <h1>{{ 'PORTFOLIO.TITLE' | translate }}</h1>
+    <span>
+      <p>{{ 'PORTFOLIO.INTRO' | translate }}</p>
+    </span>
+  </div>
+
+  <div>
+    <div *ngFor="let project of projects; let i = index" #projectSection class="portfolio-container {{ i % 2 == 1 ? 'reverse' : '' }}" [attr.data-index]="i">
+      <div class="portfolio-img" [class.visible]="isVisible(i)">
+        <a href="{{ project.projecturl }}" target="_blank">
+          <img [src]="project.img" [alt]="project.title | translate" />
+        </a>
+        <div class="hover-box" [class.visible]="isVisible(i)">
+          <div class="hover-border"></div>
+          <div class="arrow-box"></div>
+        </div>
+      </div>
+      <div class="desc" [class.visible]="isVisible(i)">
+        <div>
+          <h2>{{ project.title | translate }}</h2>
+          <h3>{{ project.languages }}</h3>
+          <p>{{ project.description | translate }}</p>
+          <div class="btn-container">
+            <div class="btn">
+              <a href="{{ project.githuburl }}" target="_blank">GitHub</a>
+            </div>
+            <div class="btn">
+              <a href="{{ project.projecturl }}" target="_blank">Test</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="skewY"></div>

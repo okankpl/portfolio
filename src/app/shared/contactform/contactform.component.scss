@@ -1,0 +1,109 @@
+input[type=text], input[type=email], select, textarea {
+  width: 100%; 
+  padding: 12px;
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical;
+  font-family: 'Overpass', sans-serif !important;
+  background-color: black;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  opacity: 1;
+}
+
+input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeholder {
+  color: white;
+  opacity: 1; 
+}
+
+input[type=submit] {
+  height: 50px;
+  width: 150px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: auto;
+  transition: ease-in-out 300ms;
+}
+
+input[type=submit]:hover:enabled {
+  width: 180px;
+  color: orange;
+  border: 2px solid orange;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: black !important;
+  padding: 20px;
+  font-family: 'Overpass', sans-serif !important;
+  max-width: 500px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headline-text-container {
+  text-align: center;
+}
+
+h2 {
+  color: orange;
+}
+
+a {
+  text-decoration: none !important;
+  color: orange !important;
+}
+
+p {
+  text-decoration: none;
+}
+
+.checkbox-container {
+  margin-bottom: 16px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 8px;
+  position: relative;
+  top: +5px;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '✔';
+  font-size: 16px;
+  color: orange;
+  position: absolute;
+  top: -3px;
+  left: 2px;
+}
+
+.submit-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
