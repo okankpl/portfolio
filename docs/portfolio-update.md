@@ -18,7 +18,7 @@ Danach `http://localhost:4200/` öffnen. Unter Windows PowerShell bei einer gesp
 ## Projekte und Texte pflegen
 
 - Projektdaten: `src/app/services/portfolio.service.ts`
-- Deutsche und englische Texte: `src/assets/i18n/de.json` und `en.json`
+- Deutsche und englische Texte: `src/assets/i18n/de.json` und `en.json` (werden beim Build in eigene JavaScript-Dateien mit Prüfsumme eingebunden; nach einer Textänderung neu bauen und hochladen – die JSON-Dateien auf dem Server zu ändern, wirkt nicht)
 - Projektbilder: `src/assets/img/`
 - Farben: `src/assets/styles/variables.scss`
 
@@ -45,7 +45,7 @@ npm.cmd test -- --watch=false --browsers=ChromeHeadless
 
 Bei nicht erkanntem Chrome die Umgebungsvariable `CHROME_BIN` auf dessen ausführbare Datei setzen. Die Kontaktformular-Tests verwenden gemockte HTTP-Anfragen und versenden keine E-Mails.
 
-Geprüft am 20.10.2026: Produktionsbuild erfolgreich, alle 29 Portfolio-Tests erfolgreich. Die öffentliche SmartDesk-Seite antwortete mit HTTP 200; ihr Readiness-Endpunkt meldete Anwendung, Datenbank und Login-Schutz als bereit. Im Headless-Browser wurden Deutsch und Englisch auf Handy- und Tablet-Formaten (hoch und quer) sowie auf dem Desktop geprüft; die Checkliste unten ersetzt nicht den Test auf echten Geräten.
+Geprüft am 20.10.2026: Produktionsbuild erfolgreich, alle 30 Portfolio-Tests erfolgreich. Die öffentliche SmartDesk-Seite antwortete mit HTTP 200; ihr Readiness-Endpunkt meldete Anwendung, Datenbank und Login-Schutz als bereit. Im Headless-Browser wurden Deutsch und Englisch auf Handy- und Tablet-Formaten (hoch und quer) sowie auf dem Desktop geprüft; die Checkliste unten ersetzt nicht den Test auf echten Geräten.
 
 ## Per FTP bei ALL-INKL veröffentlichen
 
@@ -57,7 +57,7 @@ Geprüft am 20.10.2026: Produktionsbuild erfolgreich, alle 29 Portfolio-Tests er
 
 Der Build kopiert `sendMail.php` in den Ausgabeordner. Für das Kontaktformular benötigt der ALL-INKL-Webspace PHP und einen eingerichteten Mailtransport für `noreply@okan-kaplan.de`. Der Angular-Entwicklungsserver führt PHP nicht aus. Die Oberfläche zeigt Versandfehler an und behält dabei den Entwurf; die direkte E-Mail-Adresse bleibt erreichbar.
 
-Der Build enthält eine `.htaccess` (Quelle: `src/.htaccess`). Sie leitet `http://` auf `https://` um, liefert vorhandene Dateien einschließlich `sendMail.php` direkt aus und gibt alle übrigen Pfade wie `/imprint` und `/privacypolicy` an `index.html` weiter. Am 20.10.2026 lieferte die Live-Seite für `/imprint` und `/privacypolicy` beim direkten Aufruf noch „404 Not Found“ und war ohne Umleitung per `http://` erreichbar; beides behebt diese Datei. Nach dem Upload `/imprint` und `/privacypolicy` direkt öffnen und neu laden sowie `http://okan-kaplan.de` aufrufen: Die Adresse muss auf `https://` wechseln. Falls die Seite danach nicht lädt (z. B. Weiterleitungsschleife), die gesicherte alte `.htaccess` zurückkopieren. Die PHP-Datei liefert JSON und akzeptiert ausschließlich POST-Anfragen mit JSON und bestätigter Datenschutzzustimmung. Ein bestätigtes `mail()`-Ergebnis bedeutet Annahme durch den Mailtransport, keine bestätigte Zustellung beim Empfänger.
+Der Build enthält eine `.htaccess` (Quelle: `src/.htaccess`). Sie leitet `http://` auf `https://` um, liefert vorhandene Dateien einschließlich `sendMail.php` direkt aus und gibt alle übrigen Pfade wie `/imprint` und `/privacypolicy` an `index.html` weiter. Außerdem muss der Browser `index.html` bei jedem Besuch kurz beim Server prüfen, damit ein neuer Upload sofort sichtbar ist; die Build-Dateien mit Prüfsumme im Namen dürfen lange zwischengespeichert werden. Am 20.10.2026 lieferte die Live-Seite für `/imprint` und `/privacypolicy` beim direkten Aufruf noch „404 Not Found“ und war ohne Umleitung per `http://` erreichbar; beides behebt diese Datei. Nach dem Upload `/imprint` und `/privacypolicy` direkt öffnen und neu laden sowie `http://okan-kaplan.de` aufrufen: Die Adresse muss auf `https://` wechseln. Falls die Seite danach nicht lädt (z. B. Weiterleitungsschleife), die gesicherte alte `.htaccess` zurückkopieren. Die PHP-Datei liefert JSON und akzeptiert ausschließlich POST-Anfragen mit JSON und bestätigter Datenschutzzustimmung. Ein bestätigtes `mail()`-Ergebnis bedeutet Annahme durch den Mailtransport, keine bestätigte Zustellung beim Empfänger.
 
 Es wurde nichts auf den öffentlichen Webspace übertragen.
 

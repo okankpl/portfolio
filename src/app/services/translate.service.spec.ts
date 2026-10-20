@@ -1,6 +1,6 @@
 import { TranslateService } from '@ngx-translate/core';
-import { Observable, Subject, of } from 'rxjs';
-import { CustomTranslateService } from './translate.service';
+import { Observable, Subject, firstValueFrom, of } from 'rxjs';
+import { BundledTranslateLoader, CustomTranslateService } from './translate.service';
 
 class ControlledTranslateService {
   browserLanguage = 'en';
@@ -117,5 +117,20 @@ describe('CustomTranslateService', () => {
     translate.respond('de');
     expect(service.getCurrentLanguage()).toBe('de');
     expect(translate.currentLang).toBe('de');
+  });
+});
+
+describe('BundledTranslateLoader', () => {
+  const keys = (texts: object, prefix = ''): string[] => Object.entries(texts).flatMap(([key, value]) =>
+    typeof value === 'object' ? keys(value, `${prefix}${key}.`) : [`${prefix}${key}`]);
+
+  it('loads the bundled German and English texts with identical keys', async () => {
+    const loader = new BundledTranslateLoader();
+    const de = await firstValueFrom(loader.getTranslation('de')) as { HERO: { TITLE: string } };
+    const en = await firstValueFrom(loader.getTranslation('en')) as { HERO: { TITLE: string } };
+
+    expect(de.HERO.TITLE).toBe('Webentwickler');
+    expect(en.HERO.TITLE).toBe('Web Developer');
+    expect(keys(de).sort()).toEqual(keys(en).sort());
   });
 });

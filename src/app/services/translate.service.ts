@@ -1,15 +1,17 @@
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { HttpClient } from '@angular/common/http';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { take } from 'rxjs';
+import { TranslateLoader, TranslateService } from '@ngx-translate/core';
+import { Observable, from, map, take } from 'rxjs';
 
 type Language = 'de' | 'en';
 const LANGUAGE_KEY = 'portfolio-language';
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+// The texts are bundled as hashed chunks, so a browser never combines new code with a cached old language file.
+export class BundledTranslateLoader implements TranslateLoader {
+  getTranslation(language: string): Observable<object> {
+    const texts = language === 'de' ? import('../../assets/i18n/de.json') : import('../../assets/i18n/en.json');
+    return from(texts).pipe(map(module => module.default));
+  }
 }
 
 @Injectable({ providedIn: 'root' })

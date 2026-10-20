@@ -1,8 +1,8 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
-import { provideHttpClient, HttpClient } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpLoaderFactory } from './services/translate.service';
+import { BundledTranslateLoader } from './services/translate.service';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -13,7 +13,7 @@ export const appConfig: ApplicationConfig = {
     })),
     provideHttpClient(),
     importProvidersFrom(TranslateModule.forRoot({
-      loader: { provide: TranslateLoader, useFactory: HttpLoaderFactory, deps: [HttpClient] }
+      loader: { provide: TranslateLoader, useClass: BundledTranslateLoader }
     }))
   ]
 };
