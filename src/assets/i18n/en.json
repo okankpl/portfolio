@@ -1,60 +1,94 @@
 {
+  "META": {
+    "TITLE": "Okan Kaplan | Web Developer – Angular & FastAPI",
+    "DESCRIPTION": "Okan Kaplan – a web developer based near Stuttgart, Germany. Explore SmartDesk and other projects built with Angular, TypeScript, Python and FastAPI.",
+    "OG_DESCRIPTION": "Web applications built with Angular and FastAPI. Projects, technologies and contact information."
+  },
   "HEADER": {
     "ABOUT": "About Me",
     "SKILLS": "My Skills",
     "PROJECTS": "Projects",
-    "HI": "Say Hi"
+    "HI": "Say Hi",
+    "OPEN_MENU": "Open menu",
+    "CLOSE_MENU": "Close menu",
+    "SWITCH_DE": "Switch to German",
+    "SWITCH_EN": "Switch to English",
+    "HOME": "Okan Kaplan – Home",
+    "NAVIGATION": "Main navigation"
   },
   "ABOUT": {
     "ABOUT": "ABOUT ME",
-    "INTRO": "I am a Front-end developer based in Stuttgart, Germany. I enjoy helping designers and companies bring their ideas into real life. I am looking forward to continuing my developer career with a job in a junior web developer position. If you think I'd be a good match for your projects, contact me!",
-    "CONTACT": "Let's talk"
+    "INTRO": "I'm Okan, a web developer based near Stuttgart, Germany. I use Angular and TypeScript to build clear, responsive interfaces. In SmartDesk, I connect the frontend to my own Python and FastAPI backend and a PostgreSQL database. I enjoy building applications that make real workflows easier to understand and use.",
+    "CONTACT": "Let's talk",
+    "IMAGE_ALT": "Portrait of Okan Kaplan"
   },
   "MY_SKILLS": {
-    "SKILLS": "My Skills"
+    "SKILLS": "My Skills",
+    "BACKEND": "Used in SmartDesk"
   },
   "PORTFOLIO": {
-    "TITLE": "Portfolio",
-    "INTRO": "Explore a selection of my work here - interact with projects to see my skills in action"
+    "TITLE": "My Projects",
+    "INTRO": "From a JavaScript game to a full-stack application: these projects show how I bring interfaces, features and data together."
   },
   "PROJECTS": {
     "JOIN": {
       "TITLE": "Join",
-      "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      "DESCRIPTION": "A Kanban-style task manager built as a team project. Organize tasks with drag and drop, assign them to team members and sort them into categories."
     },
     "POLLO_LOCO": {
       "TITLE": "Pollo Loco",
-      "DESCRIPTION": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+      "DESCRIPTION": "A browser game built with object-oriented JavaScript. Help Pepe run, jump, throw salsa bottles, collect coins and take on the crazy chicken."
     },
     "POKEDEX": {
       "TITLE": "Pokédex",
       "DESCRIPTION": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+    },
+    "FEATURED": "Full-stack project",
+    "LIVE_DEMO": "Live demo",
+    "SOURCE_GITHUB": "Source on GitHub",
+    "SOURCE": "Source code",
+    "SCREENSHOT": "Application screenshot",
+    "TECHNOLOGIES": "Technologies used",
+    "SMARTDESK": {
+      "TITLE": "SmartDesk",
+      "DESCRIPTION": "An IT help desk application with three roles, a defined ticket lifecycle and a full change history. Built with Angular, FastAPI and PostgreSQL, covered by more than 250 automated tests, and running live with a private demo workspace for every visitor.",
+      "IMAGE_ALT": "SmartDesk dashboard from the support team's perspective with metrics, status filters and a ticket list",
+      "WORKFLOW": "Create, assign, resolve and close tickets",
+      "ROLES": "Separate permissions for employees, support agents and administrators",
+      "HISTORY": "Comments and a traceable change history",
+      "DEMO_NOTE": "No account needed: in the live demo, click “Demo starten” (Start demo) and switch roles via “Ansicht als” (View as). The demo is in German, and your private workspace is deleted automatically after 24 hours."
     }
   },
   "CONTACT_FORM": {
-    "HEADLINE": "Want to discuss a new project?",
-    "SUBHEADLINE": "Say Hello! let's discuss your ideas and make it happen",
+    "HEADLINE": "Let's start a conversation.",
+    "SUBHEADLINE": "Have a question about my projects or an idea for working together? Send me a message.",
     "NAME_PLACEHOLDER": "Your name",
-    "EMAIL_PLACEHOLDER": "Your email",
-    "MESSAGE_PLACEHOLDER": "Your Message",
-    "NAME_ERROR": "Please enter a name",
-    "EMAIL_ERROR": "Please enter a valid email (xyz@xyz.xyz)",
-    "MESSAGE_ERROR": "Please enter a message",
-    "PRIVACY_POLICY": "I've read the <a href='privacypolicy' class='privacy-link'>privacy policy</a> and agree to the processing of my data as outlined",
+    "EMAIL_PLACEHOLDER": "Your email address",
+    "MESSAGE_PLACEHOLDER": "Your message",
+    "NAME_ERROR": "Please enter your name.",
+    "EMAIL_ERROR": "Please enter a valid email address.",
+    "MESSAGE_ERROR": "Please enter a message.",
+    "PRIVACY_POLICY": "I have read the <a href='/privacypolicy' target='_blank' rel='noopener' class='privacy-link'>privacy policy</a> and agree that my details may be processed to answer my message.",
     "SUBMIT": "Send message",
-    "EMAIL_SENT": "Email sent successfully!"
-    
+    "EMAIL_SENT": "Thank you! Your message has been sent. I'll get back to you as soon as possible.",
+    "SENDING": "Sending…",
+    "SEND_ERROR": "Your message could not be sent. Your draft has been kept. Please try again or email me directly.",
+    "DIRECT_CONTACT": "You can also email me directly at"
   },
   "FOOTER": {
     "SAY_HI": "Say Hi!",
-    "COPYRIGHT": "Okan Kaplan 2024",
-    "LEGAL_NOTICE": "Legal notice"
+    "COPYRIGHT": "Okan Kaplan",
+    "LEGAL_NOTICE": "Legal notice",
+    "PRIVACY": "Privacy",
+    "BACK_TOP": "Back to top"
   },
   "IMPRINT": {
-    "IMPRINT": "Imprint",
-    "CONTACT": "Contact"
+    "IMPRINT": "Legal notice",
+    "CONTACT": "Contact",
+    "PHONE": "Phone",
+    "EMAIL": "Email",
+    "SOURCE": "Source"
   },
-
   "PRIVACY_POLICY": {
     "TITLE": "Privacy Policy",
     "LAST_UPDATED": "Last updated: July 11, 2024",
@@ -78,5 +112,20 @@
       "USAGE_DATA": "Usage Data refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).",
       "WEBSITE": "Website refers to Portfolio, accessible from https://okan-kaplan.de/",
       "YOU": "You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable."
-    }}
+    }
+  },
+  "HERO": {
+    "INTRO": "Angular · Python · FastAPI",
+    "DESCRIPTION": "I build web applications, from clear interfaces to APIs and databases. Here's a look at what I make.",
+    "PROJECTS": "Explore projects",
+    "CONTACT": "Get in touch",
+    "SCROLL": "More about me",
+    "TITLE": "Web Developer",
+    "TITLE_FIRST_LINE": "Web",
+    "TITLE_SECOND_LINE": "Developer"
+  },
+  "COMMON": {
+    "SKIP_CONTENT": "Skip to content",
+    "EMAIL_LINK": "Send an email"
+  }
 }

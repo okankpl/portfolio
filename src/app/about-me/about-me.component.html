@@ -1,13 +1,13 @@
-<section>
-  <span><h1>{{ 'ABOUT.ABOUT' | translate }}</h1></span>
+<section aria-labelledby="about-heading">
+  <h2 id="about-heading">{{ 'ABOUT.ABOUT' | translate }}</h2>
   <div class="about-me-container">
     <div class="about-me">
-      <span>{{ 'ABOUT.INTRO' | translate }}</span>
+      <p>{{ 'ABOUT.INTRO' | translate }}</p>
       <div class="btn"><a href="#contact">{{ 'ABOUT.CONTACT' | translate }}</a></div>
     </div>
     <div class="about-me-img">
-      <img src="./assets/img/bild1.png" alt="" />
+      <img src="./assets/img/bild1.png" [alt]="'ABOUT.IMAGE_ALT' | translate" width="652" height="734" loading="lazy" decoding="async" />
     </div>
   </div>
-  <app-navarrow></app-navarrow>
+  <app-navarrow aria-hidden="true"></app-navarrow>
 </section>

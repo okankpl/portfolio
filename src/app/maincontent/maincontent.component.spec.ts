@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { MaincontentComponent } from './maincontent.component';
 
@@ -8,7 +9,7 @@ describe('MaincontentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MaincontentComponent]
+      imports: [MaincontentComponent, TranslateModule.forRoot()]
     })
     .compileComponents();
     

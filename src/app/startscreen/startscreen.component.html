@@ -1,32 +1,14 @@
-<section class="container">
-  <div class="headline">
-    <h1>
-      Frontend <br />
-      Developer
-    </h1>
+<section class="hero" aria-labelledby="hero-title">
+  <p class="eyebrow">{{ 'HERO.INTRO' | translate }}</p>
+  <h1 id="hero-title" [attr.aria-label]="'HERO.TITLE' | translate"><span aria-hidden="true">{{ 'HERO.TITLE_FIRST_LINE' | translate }}<br />{{ 'HERO.TITLE_SECOND_LINE' | translate }}</span></h1>
+  <div class="name-line"><span aria-hidden="true"></span><p>Okan Kaplan</p></div>
+  <p class="hero-description">{{ 'HERO.DESCRIPTION' | translate }}</p>
+  <div class="hero-actions">
+    <a class="primary" href="#projects">{{ 'HERO.PROJECTS' | translate }} <span aria-hidden="true">&#8599;</span></a>
+    <a href="#contact">{{ 'HERO.CONTACT' | translate }} <span aria-hidden="true">&#8594;</span></a>
   </div>
-  <div class="name-line">
-    <div class="line"></div>
-    <span><h3>Okan Kaplan</h3></span>
-  </div>
-  <div class="font-overpass under-section">
-    <span class="email">contact&#64;okan-kaplan.de</span>
-    <div>
-      <a href="#aboutMe">
-        <div class="scroll-down" id="scroll-down">
-          <img
-            src="./assets/img/scrolldown1.png"
-            alt="Scroll Down"
-            id="scroll-img"
-            class="animate"
-          />
-        </div>
-
-        <span class="font-size-32">
-          Scroll <br />
-          Down
-        </span>
-      </a>
-    </div>
+  <div class="hero-bottom">
+    <a href="mailto:contact@okan-kaplan.de">contact&#64;okan-kaplan.de</a>
+    <a href="#aboutMe" class="scroll-link">{{ 'HERO.SCROLL' | translate }} <span aria-hidden="true">&#8595;</span></a>
   </div>
 </section>

@@ -1,56 +1,93 @@
 {
+  "META": {
+    "TITLE": "Okan Kaplan | Webentwickler – Angular & FastAPI",
+    "DESCRIPTION": "Okan Kaplan – Webentwickler aus der Region Stuttgart. Entdecke SmartDesk und weitere Projekte mit Angular, TypeScript, Python und FastAPI.",
+    "OG_DESCRIPTION": "Webanwendungen mit Angular und FastAPI. Projekte, Technologien und Kontakt."
+  },
   "HEADER": {
     "ABOUT": "Über mich",
     "SKILLS": "Meine Fähigkeiten",
     "PROJECTS": "Projekte",
-    "HI": "Sag Hallo"
+    "HI": "Sag Hallo",
+    "OPEN_MENU": "Menü öffnen",
+    "CLOSE_MENU": "Menü schließen",
+    "SWITCH_DE": "Auf Deutsch wechseln",
+    "SWITCH_EN": "Auf Englisch wechseln",
+    "HOME": "Okan Kaplan – Startseite",
+    "NAVIGATION": "Hauptnavigation"
   },
   "ABOUT": {
     "ABOUT": "ÜBER MICH",
-    "INTRO": "Ich bin ein Front-End-Entwickler mit Sitz in Stuttgart, Deutschland. Ich unterstütze gerne Designer und Unternehmen dabei, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Entwicklerkarriere mit einer Position als Junior-Webentwickler fortzusetzen. Wenn Sie denken, dass ich gut zu Ihren Projekten passen würde, kontaktieren Sie mich!",
-    "CONTACT": "Lass uns reden"
+    "INTRO": "Ich bin Okan, Webentwickler aus der Region Stuttgart. Mit Angular und TypeScript entwickle ich übersichtliche, responsive Oberflächen. Bei SmartDesk verbinde ich das Frontend mit einem eigenen Backend aus Python und FastAPI sowie einer PostgreSQL-Datenbank. Mich interessieren Anwendungen, die echte Abläufe verständlicher und einfacher machen.",
+    "CONTACT": "Lass uns sprechen",
+    "IMAGE_ALT": "Porträt von Okan Kaplan"
   },
   "MY_SKILLS": {
-    "SKILLS": "Meine Fähigkeiten"
+    "SKILLS": "Meine Fähigkeiten",
+    "BACKEND": "Im Einsatz bei SmartDesk"
   },
   "PORTFOLIO": {
-    "TITLE": "Portfolio",
-    "INTRO": "Entdecken Sie eine Auswahl meiner Arbeit hier - interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen"
+    "TITLE": "Meine Projekte",
+    "INTRO": "Vom JavaScript-Spiel bis zur Full-Stack-Anwendung: Diese Projekte zeigen, wie ich Oberflächen, Funktionen und Daten zusammenbringe."
   },
   "PROJECTS": {
     "JOIN": {
       "TITLE": "Join",
-      "DESCRIPTION": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+      "DESCRIPTION": "Ein im Team entwickelter Task-Manager nach dem Kanban-Prinzip. Aufgaben lassen sich per Drag-and-drop organisieren, Personen zuweisen und in Kategorien einteilen."
     },
     "POLLO_LOCO": {
       "TITLE": "Pollo Loco",
-      "DESCRIPTION": "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+      "DESCRIPTION": "Ein Browserspiel mit objektorientiertem JavaScript: Pepe läuft, springt, wirft Salsaflaschen, sammelt Münzen und tritt gegen das verrückte Huhn an."
     },
     "POKEDEX": {
       "TITLE": "Pokédex",
       "DESCRIPTION": "Basierend auf der PokéAPI, eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+    },
+    "FEATURED": "Full-Stack-Projekt",
+    "LIVE_DEMO": "Live-Demo",
+    "SOURCE_GITHUB": "Code auf GitHub",
+    "SOURCE": "Quellcode",
+    "SCREENSHOT": "Anwendungsansicht",
+    "TECHNOLOGIES": "Verwendete Technologien",
+    "SMARTDESK": {
+      "TITLE": "SmartDesk",
+      "DESCRIPTION": "Ein Ticketsystem für den internen IT-Support mit drei Rollen, festgelegtem Ticket-Ablauf und vollständigem Änderungsverlauf. Umgesetzt mit Angular, FastAPI und PostgreSQL, abgesichert durch über 250 automatisierte Tests und live in einem eigenen, privaten Demo-Arbeitsbereich ausprobierbar.",
+      "IMAGE_ALT": "SmartDesk-Dashboard aus Sicht des Supports mit Kennzahlen, Statusfiltern und Ticketliste",
+      "WORKFLOW": "Tickets erstellen, zuweisen, lösen und abschließen",
+      "ROLES": "Eigene Berechtigungen für Mitarbeitende, Support und Administration",
+      "HISTORY": "Kommentare und nachvollziehbarer Änderungsverlauf",
+      "DEMO_NOTE": "Kein Konto nötig: In der Live-Demo „Demo starten“ wählen und über „Ansicht als“ die Rolle wechseln. Dein privater Demo-Arbeitsbereich wird nach 24 Stunden automatisch gelöscht."
     }
   },
   "CONTACT_FORM": {
-    "HEADLINE": "Möchten Sie ein neues Projekt besprechen?",
-    "SUBHEADLINE": "Sagen Sie Hallo! Lassen Sie uns Ihre Ideen besprechen und umsetzen.",
-    "NAME_PLACEHOLDER": "Ihr Name",
-    "EMAIL_PLACEHOLDER": "Ihre E-Mail",
-    "MESSAGE_PLACEHOLDER": "Ihre Nachricht",
-    "NAME_ERROR": "Bitte geben Sie einen Namen ein",
-    "EMAIL_ERROR": "Bitte geben Sie eine gültige E-Mail-Adresse ein (xyz@xyz.xyz)",
-    "MESSAGE_ERROR": "Bitte geben Sie eine Nachricht ein",
-    "PRIVACY_POLICY": "Ich habe die <a href='privacypolicy' class='privacy-link'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu",
-    "EMAIL_SENT": "E-Mail erfolgreich gesendet!"
+    "HEADLINE": "Lass uns ins Gespräch kommen.",
+    "SUBHEADLINE": "Eine Frage zu meinen Projekten oder eine Idee für die Zusammenarbeit? Schreib mir.",
+    "NAME_PLACEHOLDER": "Dein Name",
+    "EMAIL_PLACEHOLDER": "Deine E-Mail-Adresse",
+    "MESSAGE_PLACEHOLDER": "Deine Nachricht",
+    "NAME_ERROR": "Bitte gib deinen Namen ein.",
+    "EMAIL_ERROR": "Bitte gib eine gültige E-Mail-Adresse ein.",
+    "MESSAGE_ERROR": "Bitte gib eine Nachricht ein.",
+    "PRIVACY_POLICY": "Ich habe die <a href='/privacypolicy' target='_blank' rel='noopener' class='privacy-link'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Angaben zur Beantwortung meiner Nachricht zu.",
+    "EMAIL_SENT": "Danke! Deine Nachricht wurde gesendet. Ich melde mich so schnell wie möglich bei dir.",
+    "SUBMIT": "Nachricht senden",
+    "SENDING": "Wird gesendet …",
+    "SEND_ERROR": "Die Nachricht konnte nicht gesendet werden. Deine Eingaben bleiben erhalten. Bitte versuche es erneut oder schreib mir direkt per E-Mail.",
+    "DIRECT_CONTACT": "Du erreichst mich auch direkt unter"
   },
   "FOOTER": {
     "SAY_HI": "Sag Hallo!",
-    "COPYRIGHT": "Okan Kaplan 2024",
-    "LEGAL_NOTICE": "Impressum"
+    "COPYRIGHT": "Okan Kaplan",
+    "LEGAL_NOTICE": "Impressum",
+    "PRIVACY": "Datenschutz",
+    "BACK_TOP": "Nach oben"
   },
   "IMPRINT": {
     "IMPRINT": "Impressum",
-    "CONTACT": "Kontakt"
+    "CONTACT": "Kontakt",
+    "PHONE": "Telefon",
+    "EMAIL": "E-Mail",
+    "SOURCE": "Quelle"
   },
   "PRIVACY_POLICY": {
     "TITLE": "Datenschutzerklärung",
@@ -76,5 +113,19 @@
       "WEBSITE": "Website bezieht sich auf Portfolio, zugänglich unter https://okan-kaplan.de/",
       "YOU": "Sie bezeichnet die Person, die auf den Service zugreift oder ihn nutzt, oder das Unternehmen oder andere juristische Person, in deren Namen diese Person auf den Service zugreift oder ihn nutzt, je nach Fall."
     }
+  },
+  "HERO": {
+    "INTRO": "Angular · Python · FastAPI",
+    "DESCRIPTION": "Ich entwickle Webanwendungen – von klaren Oberflächen bis zur API und Datenbank. Hier zeige ich, was ich baue.",
+    "PROJECTS": "Projekte ansehen",
+    "CONTACT": "Kontakt aufnehmen",
+    "SCROLL": "Mehr über mich",
+    "TITLE": "Webentwickler",
+    "TITLE_FIRST_LINE": "Web-",
+    "TITLE_SECOND_LINE": "Entwickler"
+  },
+  "COMMON": {
+    "SKIP_CONTENT": "Zum Inhalt",
+    "EMAIL_LINK": "E-Mail schreiben"
   }
 }

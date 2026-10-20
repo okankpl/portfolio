@@ -1,3 +1,5 @@
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
   margin: auto 0;
   width: 100%;
@@ -14,6 +16,20 @@ body {
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: max(12vh, 96px);
+}
+
+button, input, textarea { font: inherit; }
+button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid #b86b00; outline-offset: 5px; }
+::selection { background: #ff9900; color: black; }
+app-about-me, app-myskills, app-projects, app-contactform { display: block; scroll-margin-top: max(12vh, 96px); }
+.skip-link { position: fixed; top: .5rem; left: .5rem; z-index: 20000; padding: .75rem 1rem; background: black; color: white; transform: translateY(-180%); font-family: 'Overpass', sans-serif; }
+.skip-link:focus { transform: none; }
+main:focus { outline: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 
 .container {

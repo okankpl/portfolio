@@ -1,30 +1,25 @@
-<footer>
+<footer aria-labelledby="contact-heading">
   <div class="container">
-    <span><h1>{{ 'FOOTER.SAY_HI' | translate }}</h1></span>
-    <div class="contact">
-      <app-contactform id="contact"></app-contactform>
-    </div>
+    <h2 id="contact-heading">{{ 'FOOTER.SAY_HI' | translate }}</h2>
+    <app-contactform id="contact"></app-contactform>
     <div class="under-section">
-      <div class="logo-Left">
-        <span class="name-copyright">
-          <h3> 
-            <img class="copyright" src="./assets/img/copyright.png" alt=""> 
-            {{ 'FOOTER.COPYRIGHT' | translate }}
-          </h3>
-        </span>
-      </div>
+      <p class="name-copyright">&copy; {{ currentYear }} {{ 'FOOTER.COPYRIGHT' | translate }}</p>
       <div class="links">
-        <a href="https://github.com/okankpl/" target="_blank">
-          <img src="./assets/img/github.png" alt="GitHub" />
+        <a href="https://github.com/okankpl/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img src="./assets/img/github.png" alt="" width="32" height="32" loading="lazy" />
         </a>
-        <a href="mailto:okan149@gmail.com" target="_blank">
-          <img src="./assets/img/email.png" alt="E-Mail" />
+        <a href="mailto:contact@okan-kaplan.de" [attr.aria-label]="'COMMON.EMAIL_LINK' | translate">
+          <img src="./assets/img/email.png" alt="" width="32" height="32" loading="lazy" />
         </a>
-        <a href="https://www.linkedin.com/in/okan-kaplan/" target="_blank">
-          <img src="./assets/img/linkedin.png" alt="LinkedIn" />
+        <a href="https://www.linkedin.com/in/okan-kaplan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="./assets/img/linkedin.png" alt="" width="32" height="32" loading="lazy" />
         </a>
       </div>
     </div>
-    <span class="legal-notice"><a href="imprint">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a></span>
+    <nav class="legal-notice" [attr.aria-label]="'FOOTER.LEGAL_NOTICE' | translate">
+      <a routerLink="/imprint">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a>
+      <a routerLink="/privacypolicy">{{ 'FOOTER.PRIVACY' | translate }}</a>
+      <a href="#main-content" (click)="scrollToTop($event)">{{ 'FOOTER.BACK_TOP' | translate }} &#8593;</a>
+    </nav>
   </div>
 </footer>

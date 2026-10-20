@@ -1,51 +1,71 @@
 <div class="container">
   <div class="headline-text-container">
-    <h2>{{ 'CONTACT_FORM.HEADLINE' | translate }}</h2>
-    <h4>{{ 'CONTACT_FORM.SUBHEADLINE' | translate }}</h4>
+    <h3>{{ 'CONTACT_FORM.HEADLINE' | translate }}</h3>
+    <p>{{ 'CONTACT_FORM.SUBHEADLINE' | translate }}</p>
   </div>
 
-  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" [attr.aria-busy]="isSending">
+    <label for="contact-name">{{ 'CONTACT_FORM.NAME_PLACEHOLDER' | translate }}</label>
     <input
       [(ngModel)]="contactData.name"
-      type="text"
-      id="name"
-      name="name"
-      placeholder="{{ 'CONTACT_FORM.NAME_PLACEHOLDER' | translate }}"
-      required
       #name="ngModel"
-    />
-    <span *ngIf="!name.valid && name.touched" style="color: orange">{{ 'CONTACT_FORM.NAME_ERROR' | translate }}</span>
-
-    <input
-      #email="ngModel"
-      [(ngModel)]="contactData.email"
-      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-      type="email"
-      id="email"
-      name="email"
-      placeholder="{{ 'CONTACT_FORM.EMAIL_PLACEHOLDER' | translate }}"
+      type="text"
+      id="contact-name"
+      name="name"
+      autocomplete="name"
+      maxlength="150"
+      [pattern]="nonWhitespacePattern"
+      [readonly]="isSending"
+      [attr.aria-invalid]="name.invalid && name.touched"
+      [attr.aria-describedby]="name.invalid && name.touched ? 'contact-name-error' : null"
       required
     />
-    <span *ngIf="!email.valid && email.touched" style="color: orange">{{ 'CONTACT_FORM.EMAIL_ERROR' | translate }}</span>
+    <span *ngIf="name.invalid && name.touched" id="contact-name-error" class="field-error">{{ 'CONTACT_FORM.NAME_ERROR' | translate }}</span>
 
+    <label for="contact-email">{{ 'CONTACT_FORM.EMAIL_PLACEHOLDER' | translate }}</label>
+    <input
+      [(ngModel)]="contactData.email"
+      #email="ngModel"
+      type="email"
+      id="contact-email"
+      name="email"
+      autocomplete="email"
+      maxlength="254"
+      [readonly]="isSending"
+      [attr.aria-invalid]="email.invalid && email.touched"
+      [attr.aria-describedby]="email.invalid && email.touched ? 'contact-email-error' : null"
+      email
+      required
+    />
+    <span *ngIf="email.invalid && email.touched" id="contact-email-error" class="field-error">{{ 'CONTACT_FORM.EMAIL_ERROR' | translate }}</span>
+
+    <label for="contact-message">{{ 'CONTACT_FORM.MESSAGE_PLACEHOLDER' | translate }}</label>
     <textarea
       [(ngModel)]="contactData.message"
       #message="ngModel"
-      id="message"
+      id="contact-message"
       name="message"
-      placeholder="{{ 'CONTACT_FORM.MESSAGE_PLACEHOLDER' | translate }}"
-      style="height: 200px"
+      rows="7"
+      maxlength="5000"
+      [pattern]="nonWhitespacePattern"
+      [readonly]="isSending"
+      [attr.aria-invalid]="message.invalid && message.touched"
+      [attr.aria-describedby]="message.invalid && message.touched ? 'contact-message-error' : null"
       required
     ></textarea>
-    <span *ngIf="!message.valid && message.touched" style="color: orange">{{ 'CONTACT_FORM.MESSAGE_ERROR' | translate }}</span>
+    <span *ngIf="message.invalid && message.touched" id="contact-message-error" class="field-error">{{ 'CONTACT_FORM.MESSAGE_ERROR' | translate }}</span>
 
     <div class="checkbox-container">
-      <input type="checkbox" id="privacyPolicy" name="privacyPolicy" [(ngModel)]="contactData.privacyPolicy" required />
-      <label for="privacyPolicy" [innerHTML]="'CONTACT_FORM.PRIVACY_POLICY' | translate"></label>
+      <input type="checkbox" id="contact-privacy" name="privacyPolicy" [(ngModel)]="contactData.privacyPolicy" #privacy="ngModel" [disabled]="isSending" [attr.aria-invalid]="privacy.invalid && privacy.touched" required />
+      <label for="contact-privacy" [innerHTML]="'CONTACT_FORM.PRIVACY_POLICY' | translate"></label>
     </div>
-    
-    <input type="submit" [disabled]="!contactForm.form.valid" class="submit-button" value="{{ 'CONTACT_FORM.SUBMIT' | translate }}" />
+
+    <button type="submit" [disabled]="!contactForm.valid || isSending" class="submit-button">
+      {{ (isSending ? 'CONTACT_FORM.SENDING' : 'CONTACT_FORM.SUBMIT') | translate }}
+    </button>
+
+    <p class="form-feedback" [class.send-error]="sendFailed" role="status" aria-live="polite" aria-atomic="true">{{ feedbackMessage | translate }}</p>
   </form>
 
-  <app-notification *ngIf="showNotification" [message]="notificationMessage"></app-notification>
+  <p class="direct-contact">{{ 'CONTACT_FORM.DIRECT_CONTACT' | translate }} <a href="mailto:contact@okan-kaplan.de">contact&#64;okan-kaplan.de</a></p>
 </div>

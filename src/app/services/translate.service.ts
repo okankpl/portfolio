@@ -1,25 +1,64 @@
-import { Injectable } from '@angular/core';
-import { TranslateService, TranslateLoader } from '@ngx-translate/core';
+import { DOCUMENT } from '@angular/common';
+import { Inject, Injectable } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { take } from 'rxjs';
+
+type Language = 'de' | 'en';
+const LANGUAGE_KEY = 'portfolio-language';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class CustomTranslateService {
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
+  private language: Language;
+  private requestedLanguage = 0;
+  private readonly loadedLanguages = new Set<Language>();
+
+  constructor(private translate: TranslateService, @Inject(DOCUMENT) private document: Document) {
+    let saved: string | null = null;
+    try {
+      saved = this.document.defaultView?.localStorage.getItem(LANGUAGE_KEY) ?? null;
+    } catch { /* Language selection also works when browser storage is disabled. */ }
+    this.language = saved === 'de' || saved === 'en' ? saved :
+      this.translate.getBrowserLang()?.toLowerCase() === 'de' ? 'de' : 'en';
+    this.document.documentElement.lang = this.language;
+    this.translate.addLangs(['de', 'en']);
+    this.switchLanguage(this.language);
   }
 
-  switchLanguage(language: string) {
-    this.translate.use(language);
+  switchLanguage(language: string): void {
+    if (language !== 'de' && language !== 'en') return;
+    const request = ++this.requestedLanguage;
+    if (this.loadedLanguages.has(language)) {
+      this.activateLanguage(language);
+      return;
+    }
+    // ngx-translate v15 can activate an older use() request after a newer one.
+    // Load first, then use only the last requested language from the cache.
+    this.translate.getTranslation(language).pipe(take(1)).subscribe({
+      next: () => {
+        this.loadedLanguages.add(language);
+        if (request === this.requestedLanguage) this.activateLanguage(language);
+      },
+      error: () => { this.document.documentElement.lang = this.language; }
+    });
   }
 
   getCurrentLanguage(): string {
-    return this.translate.currentLang || this.translate.defaultLang;
+    return this.language;
+  }
+
+  private activateLanguage(language: Language): void {
+    if (!this.translate.getDefaultLang()) this.translate.setDefaultLang(language);
+    this.translate.use(language);
+    this.language = language;
+    this.document.documentElement.lang = language;
+    try {
+      this.document.defaultView?.localStorage.setItem(LANGUAGE_KEY, language);
+    } catch { /* Keep the in-memory selection when persistence is unavailable. */ }
   }
 }

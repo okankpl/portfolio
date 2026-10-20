@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { MyskillsComponent } from './myskills.component';
 
@@ -8,7 +9,7 @@ describe('MyskillsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MyskillsComponent]
+      imports: [MyskillsComponent, TranslateModule.forRoot()]
     })
     .compileComponents();
     

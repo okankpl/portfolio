@@ -1,14 +1,20 @@
 <div class="container">
-  <section>
+  <section aria-labelledby="skills-heading">
     <div class="skills-container">
-      <h1>{{ "MY_SKILLS.SKILLS" | translate }}</h1>
+      <h2 id="skills-heading">{{ 'MY_SKILLS.SKILLS' | translate }}</h2>
       <div class="my-skills">
-        @for (skill of skills; track $index) {
-        <div>
-          <img src="./assets/img/{{ skill.icon }}" alt="" />
-          <span>{{ skill.name }}</span>
-        </div>
+        @for (skill of skills; track skill.name) {
+          <div>
+            <img [src]="'./assets/img/' + skill.icon" alt="" width="64" height="64" loading="lazy" decoding="async" />
+            <span>{{ skill.name }}</span>
+          </div>
         }
+      </div>
+      <div class="backend-skills">
+        <p>{{ 'MY_SKILLS.BACKEND' | translate }}</p>
+        <ul>
+          @for (skill of backendSkills; track skill) { <li>{{ skill }}</li> }
+        </ul>
       </div>
     </div>
   </section>

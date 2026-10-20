@@ -1,6 +1,11 @@
 section {
     max-width: 1920px;
     width: 90%;
-    margin: 15vh auto 100px;
+    margin: max(15vh, 100px) auto 100px;
     font-family: 'Overpass',sans-serif;
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: clamp(1.6rem, 8vw, 2rem);
 }

@@ -38,3 +38,6 @@
   .animate {
     animation: growAndChange 2s forwards;
   }
+@media (max-width: 500px) {
+  .arrow { left: 170px; }
+}

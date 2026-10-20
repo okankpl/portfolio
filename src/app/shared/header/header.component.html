@@ -1,52 +1,42 @@
 <section>
-  <header>
-    <a href="#">
-      <div>
-        <img class="logo" src="./assets/img/logo.png" alt="Logo" />
-      </div>
+  <header #header>
+    <a routerLink="/" (click)="closeMenu()" [attr.aria-label]="'HEADER.HOME' | translate">
+      <img class="logo" src="./assets/img/logo.png" alt="Okan Kaplan" width="80" height="80" />
     </a>
     <div class="burger-lang">
-       <div class="translate" *ngIf="currentLang !== 'en'" (click)="switchLanguage('en')">
-      <img src="./assets/img/eng.png" alt="English" />
+      <button class="translate" type="button" (click)="switchLanguage(currentLang === 'de' ? 'en' : 'de')"
+        [attr.aria-label]="(currentLang === 'de' ? 'HEADER.SWITCH_EN' : 'HEADER.SWITCH_DE') | translate">
+        <img [src]="currentLang === 'de' ? './assets/img/eng.png' : './assets/img/de.png'" alt="" width="40" height="40" />
+      </button>
+      <button #menuButton class="burger-menu" type="button" (click)="toggleMenu()"
+        [class.active]="menuActive" [attr.aria-expanded]="menuActive" aria-controls="portfolio-menu"
+        [attr.aria-label]="(menuActive ? 'HEADER.CLOSE_MENU' : 'HEADER.OPEN_MENU') | translate">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="translate" *ngIf="currentLang !== 'de'" (click)="switchLanguage('de')">
-      <img src="./assets/img/de.png" alt="Deutsch" />
-    </div>
-    <div class="burger-menu" (click)="toggleMenu()">
-      <img [src]="getCurrentFrame()" alt="Burger Menu" />
-    </div>
-    </div>
-   
-    
-    <div class="overlay" [@toggleOverlay]="menuActive ? 'active' : 'inactive'" *ngIf="menuActive">
-      <nav>
-        <div>
-          <span>
-            <a (click)="closeMenu()" href="#aboutMe">{{ 'HEADER.ABOUT' | translate }}</a>
-          </span>
-          <span>
-            <a (click)="closeMenu()" href="#mySkills">{{ 'HEADER.SKILLS' | translate }}</a>
-          </span>
-          <span>
-            <a (click)="closeMenu()" href="#projects">{{ 'HEADER.PROJECTS' | translate }}</a>
-          </span>
-        </div>
 
+    <div id="portfolio-menu" class="overlay" *ngIf="menuActive">
+      <nav [attr.aria-label]="'HEADER.NAVIGATION' | translate">
+        <div class="nav-links">
+          <a #firstMenuLink routerLink="/" fragment="aboutMe" (click)="closeMenu()">{{ 'HEADER.ABOUT' | translate }}</a>
+          <a routerLink="/" fragment="mySkills" (click)="closeMenu()">{{ 'HEADER.SKILLS' | translate }}</a>
+          <a routerLink="/" fragment="projects" (click)="closeMenu()">{{ 'HEADER.PROJECTS' | translate }}</a>
+        </div>
         <div class="say-hi">
           <div>
             <div>
               <h2>{{ 'HEADER.HI' | translate }}</h2>
-              <h4>okan149&#64;gmail.com</h4> 
+              <a class="email" href="mailto:contact@okan-kaplan.de">contact&#64;okan-kaplan.de</a>
             </div>
             <div class="links">
-              <a href="https://github.com/okankpl/" target="_blank">
-                <img src="./assets/img/github.png" alt="GitHub" />
+              <a href="https://github.com/okankpl/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/img/github.png" alt="GitHub" width="48" height="48" />
               </a>
-              <a href="contact@okan-kaplan.de" target="_blank">
-                <img src="./assets/img/email.png" alt="E-Mail" />
+              <a href="mailto:contact@okan-kaplan.de">
+                <img src="./assets/img/email.png" [alt]="'COMMON.EMAIL_LINK' | translate" width="48" height="48" />
               </a>
-              <a href="https://www.linkedin.com/in/okan-kaplan/" target="_blank">
-                <img src="./assets/img/linkedin.png" alt="LinkedIn" />
+              <a href="https://www.linkedin.com/in/okan-kaplan/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/img/linkedin.png" alt="LinkedIn" width="48" height="48" />
               </a>
             </div>
           </div>

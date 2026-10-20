@@ -1,134 +1,131 @@
-@import "./../../assets/styles/variables";
-@import "./../../assets/styles/mixins";
+@import '../../assets/styles/variables';
 
-section {
-  background-color: $bgr_color !important;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  height: 90vh; 
-  box-sizing: border-box;
-  padding-top: 8vh;
+.hero {
   width: 90%;
-  > div {
-    @include dFlex($g:5px);
-    flex-direction: row;
-    > .line {
-      @include widthHeight($h: 3px, $w:50%);
-      background-color: black;
-      margin-top: 0px;
-    }
-  }
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.headline {
+  max-width: 1200px;
+  min-height: 92svh;
+  margin: auto;
+  padding: max(15vh, 120px) 0 2rem;
   box-sizing: border-box;
-  > h1 {
-    max-width: 1920px !important;
-    font-size: 80px;
-    font-weight: 800;
-    font-family: "Syne";
-    text-align: center;
-    margin-bottom: 0;
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-}
-
-h3 {
-  font-size: 44px;
-  font-weight: 700;
-  font-family: "Syne";
-  color: $orange;
-  margin: 0;
-}
-
-.under-section {
-  flex-direction: column;
-  flex-grow: 1;
-  @include dFlex($jc:space-between !important); 
-  max-width: 1920px;
-  margin: auto;
-  width: 100%;
-}
-
-.name-line {
-  max-width: 1920px;
-  margin: auto;
-  width: 100%;
-}
-
-.font-size-32{
-  font-weight: 400;
-  font-size: 28px !important;
-  letter-spacing: 0;
-}
-
-.email {
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  font-weight: 400;
-  font-size: 24px;
-}
-
-.scroll-down {
-  text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
-  position: relative;
-  overflow: hidden; 
-  height: 140px;
+  font-family: 'Overpass', sans-serif;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  font-size: .95rem;
+  text-transform: uppercase;
+  letter-spacing: .15em;
   text-align: center;
 }
 
-.scroll-down > img {
-  width: 70px;
-  animation: scrollAnimation 2s linear infinite;
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.04em;
+  text-align: center;
+  margin: 0;
 }
 
-
-@keyframes scrollAnimation {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  70% {
-    transform: translateY(140px);
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(0);
-  }
+.name-line {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: min(100%, 650px);
+  margin-top: 1.5rem;
 }
 
-@media(max-width:750px) {
-  h1{
-    font-size: 54px !important;
-  }
-  h3{
-    font-size: 32px;
-  }
+.name-line span {
+  height: 3px;
+  background: black;
+  flex: 1;
 }
 
-@media(max-width:450px) {
-  h1{
-    font-size: 40px !important;
-  }
+.name-line p {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.75rem);
+  color: #975600;
+  font-weight: 700;
+  margin: 0;
 }
 
-@media(max-width:550px) {
-  h3{
-    font-size: 26px;
+.hero-description {
+  max-width: 580px;
+  text-align: center;
+  line-height: 1.65;
+  font-size: 1.15rem;
+  margin: 1.75rem 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .8rem;
+}
+
+.hero-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .75rem 1.2rem;
+  min-height: 44px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  font-weight: 600;
+}
+
+.hero-actions .primary, .hero-actions a:hover {
+  background: black;
+  color: $bgr_color;
+}
+
+.hero-actions .primary:hover {
+  background: $orange;
+  color: black;
+}
+
+.hero-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 3rem;
+  font-size: .95rem;
+}
+
+.hero-bottom a {
+  padding: .5rem 0;
+}
+
+.hero-bottom a:hover {
+  text-decoration: underline;
+}
+
+.scroll-link span {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-left: .5rem;
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: clamp(2.25rem, 11vw, 3.5rem);
   }
-  
+
+  .hero-bottom {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
 }

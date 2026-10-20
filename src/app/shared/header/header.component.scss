@@ -1,194 +1,64 @@
 @import "./../../../assets/styles/variables.scss";
-@import "./../../../assets/styles/mixins.scss";
-
-section {
-  scroll-margin-top: 10vh; /* Höhe des Headers */
-}
-
-h1, h2, h3, h4, h5, h6 {
-  scroll-margin-top: 10vh;
-}
-
-body {
-  margin: 0;
-}
 
 section {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background-color: $bgr_color;
-  box-sizing: border-box;
-  height: 10vh;
+  inset: 0 0 auto;
+  // Phones in landscape are only ~400px tall; keep room for the 48px buttons.
+  height: max(10vh, 64px);
+  background: $bgr_color;
   z-index: 9000;
 }
-
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  background-color: $bgr_color !important;
+  width: 90%;
   max-width: 1920px;
+  height: 100%;
   margin: auto;
-  @include widthHeight($h: 10vh, $w: 90%);
-  @include dFlex($jc: space-between);
-  > a {
-    > div {
-      > .logo {
-        height: 80px;
-      }
-    }
-  }
-}
-
-.translate {
-  > img {
-    width: 40px;
-    cursor: pointer;
-  }
-}
-
-.overlay {
-  position: fixed;
-  top: 8vh;
-  left: 0;
-  right: 0;
-  width: 100vw;
-  height: 100%;
-  background-color: $bgr_color;
-  box-sizing: border-box;
-}
-
-.no-scroll {
-  overflow: hidden !important;
-  height: 100%;
-}
-
-nav {
-  font-family: "Syne", sans-serif;
-  @include widthHeight($h: 92vh, $w: 100%);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+.logo { width: auto; height: clamp(48px, 9vh, 80px); }
+.burger-lang { display: flex; align-items: center; gap: clamp(16px, 4vw, 40px); }
+button {
+  border: 0;
+  padding: 4px;
+  background: none;
+  cursor: pointer;
+  min-width: 48px;
+  min-height: 48px;
+}
+a:focus-visible, button:focus-visible { outline: 3px solid $orange; outline-offset: 5px; }
+.translate img { display: block; object-fit: contain; }
+.burger-menu {
+  position: relative;
+  z-index: 1;
+  span { display: block; width: 40px; height: 3px; margin: 7px 0; background: black; transition: transform .25s, opacity .25s; }
+  &.active span:first-child { transform: translateY(10px) rotate(45deg); }
+  &.active span:nth-child(2) { opacity: 0; }
+  &.active span:last-child { transform: translateY(-10px) rotate(-45deg); }
+}
+.overlay { position: fixed; inset: max(10vh, 64px) 0 0; overflow-y: auto; background: $bgr_color; }
+nav { min-height: 100%; display: flex; flex-direction: column; font-family: "Syne", sans-serif; }
+.nav-links {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 26px;
-  > div {
-    @include dFlex($g: 30px);
-    flex-direction: column;
-    min-height: 50%;
-    > span {
-      text-align: center;
-      position: relative;
-      > a {
-        color: black;
-        width: 300px;
-        font-size: 40px;
-        cursor: pointer;
-        position: relative;
-        display: inline-block;
-        padding: 0 0 5px 5px;
-        text-decoration: none;
-      }
-
-      > a::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        @include widthHeight($h: 3px, $w: 20%);
-        background: black;
-        transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-      }
-
-      > a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        @include widthHeight($h: 50%, $w: 3px);
-        background: black;
-        transition: height 0.3s ease-in-out;
-      }
-
-      > a:hover::before {
-        width: 50%;
-        left: 50%;
-      }
-
-      > a:hover::after {
-        height: 0;
-      }
-    }
-  }
+  padding: 24px;
+  a { color: black; font-size: clamp(26px, 5vw, 40px); text-align: center; padding: 0 5px 5px; border-bottom: 3px solid black; text-decoration: none; }
+  a:hover { color: $orange; }
 }
-
-.burger-menu {
-  > img {
-    width: 48px;
-    cursor: pointer;
-  }
-  > img:hover {
-    transform: scale(1.05);
-    transition: ease-in-out 300ms;
-  }
-}
-
 .say-hi {
   color: white;
   background: black;
-  transform: skewY(+5deg);
-  transform-origin: top left;
-  @include widthHeight($h: 100%, $w: 100vw);
-
-  > div {
-    transform: skewY(-5deg);
-    transform-origin: top left;
-    @include dFlex($jc: space-between);
-    margin: auto;
-    max-width: 1920px;
-    @include widthHeight($h: 100%, $w: 90%);
-  }
+  padding: 48px 0 24px;
+  clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 100%);
+  > div { width: 90%; max-width: 1920px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 }
-
-.burger-lang {
-  display: flex;
-  gap: 40px; 
-}
-
-h4,
-h2 {
-  cursor: pointer;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-h4:hover,
-h2:hover {
-  cursor: pointer;
-  color: $orange;
-  transform: scale(1.05);
-  transition: ease-in-out 300ms;
-}
-h2 {
-  font-size: 52px;
-}
-
-.links {
-  > a {
-    > img {
-      height: 48px;
-      transition: transform 0.3s ease-in-out;
-    }
-  }
-}
-
-.links {
-  > a {
-    > img:hover {
-      transform: translateY(-10px);
-    }
-  }
-}
+h2 { margin: 0 0 12px; font-size: clamp(36px, 6vw, 52px); }
+.email { color: white; overflow-wrap: anywhere; }
+.links { display: flex; gap: 16px; img { display: block; transition: transform .2s; } a:hover img { transform: translateY(-6px); } }
+@media (max-width: 600px) { .say-hi > div { flex-direction: column; align-items: flex-start; } }
+@media (prefers-reduced-motion: reduce) { .burger-menu span, .links img { transition: none; } }

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { ImprintComponent } from './imprint.component';
 
@@ -8,7 +9,7 @@ describe('ImprintComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ImprintComponent]
+      imports: [ImprintComponent, TranslateModule.forRoot()]
     })
     .compileComponents();
     
