@@ -1,0 +1,17 @@
+# Apache configuration for the Angular build (copied to the web root by "ng build").
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Always use HTTPS (the contact form must be transmitted encrypted).
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # Serve existing files (assets, sendMail.php, ...) directly.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Let Angular handle all other paths such as /imprint and /privacypolicy.
+  RewriteRule ^ index.html [L]
+</IfModule>
