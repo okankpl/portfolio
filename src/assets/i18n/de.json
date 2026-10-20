@@ -39,10 +39,6 @@
       "TITLE": "Pollo Loco",
       "DESCRIPTION": "Ein Browserspiel mit objektorientiertem JavaScript: Pepe läuft, springt, wirft Salsaflaschen, sammelt Münzen und tritt gegen das verrückte Huhn an."
     },
-    "POKEDEX": {
-      "TITLE": "Pokédex",
-      "DESCRIPTION": "Basierend auf der PokéAPI, eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
-    },
     "FEATURED": "Full-Stack-Projekt",
     "LIVE_DEMO": "Live-Demo",
     "SOURCE_GITHUB": "Code auf GitHub",
