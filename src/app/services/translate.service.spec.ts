@@ -63,7 +63,19 @@ describe('CustomTranslateService', () => {
     translate.respond('en');
     expect(translate.currentLang).toBe('en');
     expect(document.documentElement.lang).toBe('en');
-    expect(storage.setItem).toHaveBeenCalledWith('portfolio-language', 'en');
+    expect(storage.setItem).not.toHaveBeenCalled();
+  });
+
+  it('stores only an explicit language choice, not the initial browser language', () => {
+    translate.browserLanguage = 'de';
+    const service = createService();
+    translate.respond('de');
+    expect(translate.currentLang).toBe('de');
+    expect(storage.setItem).not.toHaveBeenCalled();
+
+    service.switchLanguage('en');
+    translate.respond('en');
+    expect(storage.setItem.calls.allArgs()).toEqual([['portfolio-language', 'en']]);
   });
 
   it('still initializes and switches language when localStorage reads and writes are blocked', () => {

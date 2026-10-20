@@ -1,15 +1,21 @@
 section {
     max-width: 1920px;
     width: 90%;
-    margin: 10vh auto;
+    margin: max(15vh, 100px) auto 100px;
     font-family: 'Overpass',sans-serif;
+    line-height: 1.6;
+    overflow-wrap: break-word;
 }
 
-.privacy-link {
-    color: orange !important;
-    text-decoration: none !important;
-  }
-  
-  .privacy-link:hover {
-    text-decoration: underline !important;
-  }
+h2 {
+    margin-top: 2.5rem;
+}
+
+.translation-note {
+    font-style: italic;
+}
+
+// "Datenschutzerklärung" is wider than small phones at the default 2em.
+h1 {
+    font-size: clamp(1.6rem, 8vw, 2rem);
+}

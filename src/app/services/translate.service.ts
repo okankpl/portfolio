@@ -27,14 +27,15 @@ export class CustomTranslateService {
       this.translate.getBrowserLang()?.toLowerCase() === 'de' ? 'de' : 'en';
     this.document.documentElement.lang = this.language;
     this.translate.addLangs(['de', 'en']);
-    this.switchLanguage(this.language);
+    this.switchLanguage(this.language, false);
   }
 
-  switchLanguage(language: string): void {
+  // Only an explicit choice is stored in localStorage (as described in the privacy policy).
+  switchLanguage(language: string, remember = true): void {
     if (language !== 'de' && language !== 'en') return;
     const request = ++this.requestedLanguage;
     if (this.loadedLanguages.has(language)) {
-      this.activateLanguage(language);
+      this.activateLanguage(language, remember);
       return;
     }
     // ngx-translate v15 can activate an older use() request after a newer one.
@@ -42,7 +43,7 @@ export class CustomTranslateService {
     this.translate.getTranslation(language).pipe(take(1)).subscribe({
       next: () => {
         this.loadedLanguages.add(language);
-        if (request === this.requestedLanguage) this.activateLanguage(language);
+        if (request === this.requestedLanguage) this.activateLanguage(language, remember);
       },
       error: () => { this.document.documentElement.lang = this.language; }
     });
@@ -52,11 +53,12 @@ export class CustomTranslateService {
     return this.language;
   }
 
-  private activateLanguage(language: Language): void {
+  private activateLanguage(language: Language, remember: boolean): void {
     if (!this.translate.getDefaultLang()) this.translate.setDefaultLang(language);
     this.translate.use(language);
     this.language = language;
     this.document.documentElement.lang = language;
+    if (!remember) return;
     try {
       this.document.defaultView?.localStorage.setItem(LANGUAGE_KEY, language);
     } catch { /* Keep the in-memory selection when persistence is unavailable. */ }
