@@ -33,6 +33,8 @@ export class PortfolioService {
 
   readonly backendSkills = ['Python', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Redis', 'Docker'];
 
+  readonly testingSkills = ['Vitest', 'Jasmine', 'Pytest', 'Playwright', 'GitHub Actions'];
+
   readonly projects: PortfolioProject[] = [
     {
       id: 'smartdesk',

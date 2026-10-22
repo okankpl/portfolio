@@ -13,4 +13,5 @@ export class MyskillsComponent {
   private readonly portfolio = inject(PortfolioService);
   readonly skills = this.portfolio.skills;
   readonly backendSkills = this.portfolio.backendSkills;
+  readonly testingSkills = this.portfolio.testingSkills;
 }

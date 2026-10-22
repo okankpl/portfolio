@@ -24,7 +24,8 @@
   },
   "MY_SKILLS": {
     "SKILLS": "My Skills",
-    "BACKEND": "Used in SmartDesk"
+    "BACKEND": "Used in SmartDesk",
+    "TESTING": "Testing & CI"
   },
   "PORTFOLIO": {
     "TITLE": "My Projects",

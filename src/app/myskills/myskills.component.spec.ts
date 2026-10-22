@@ -21,4 +21,11 @@ describe('MyskillsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('lists the testing tools next to the SmartDesk stack', () => {
+    const chips = Array.from((fixture.nativeElement as HTMLElement).querySelectorAll('.backend-skills li'), li => li.textContent?.trim());
+    expect(chips).toContain('FastAPI');
+    expect(chips).toContain('Pytest');
+    expect(chips).toContain('Playwright');
+  });
 });
