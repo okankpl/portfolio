@@ -139,7 +139,8 @@ h3 {
 }
 
 .skewY {
-  height: 12vh;
+  // At least tan(4deg) * width (~7vw), otherwise the slant flattens out at the right edge of wide screens.
+  height: max(12vh, 7.5vw);
   background: black;
   transform-origin: top left;
   transform: skewY(4deg);

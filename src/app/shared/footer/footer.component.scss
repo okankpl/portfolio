@@ -1,6 +1,10 @@
 @import '../../../assets/styles/variables';
 
 footer {
+  // The skewed black band above (.skewY in projects) reaches into the footer on wide screens;
+  // keep the footer content on top of it.
+  position: relative;
+  z-index: 1;
   font-family: 'Overpass', sans-serif;
   color: white;
   background: black;
